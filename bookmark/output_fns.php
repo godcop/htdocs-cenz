@@ -1,11 +1,11 @@
-<?php
+ï»¿<?php
 
 /**
  * @author switch
  * @copyright 2015
- * ÒÔHTMLÐÎÊ½¸ñÊ½»¯Êä³öµÄº¯Êý
+ * ä»¥HTMLå½¢å¼æ ¼å¼åŒ–è¾“å‡ºçš„å‡½æ•°
  */
-    function do_html_header($title) //´òÓ¡HTML±êÌâ
+    function do_html_header($title) //æ‰“å°HTMLæ ‡é¢˜
     {
         ?>
         <html>
@@ -29,7 +29,7 @@
         }
     }
             
-    function do_html_footer()   //´òÓ¡HTMLÒ³Î²
+    function do_html_footer()   //æ‰“å°HTMLé¡µå°¾
     {
         ?>
         </body>
@@ -37,21 +37,21 @@
         <?php
     }
             
-    function do_html_heading($heading)  //´òÓ¡±êÌâ
+    function do_html_heading($heading)  //æ‰“å°æ ‡é¢˜
     {
         ?>
         <h2><?php echo $heading; ?></h2>
         <?php
     }
             
-    function do_html_URL($url,$name)    //Êä³öURL
+    function do_html_URL($url,$name)    //è¾“å‡ºURL
     {
         ?>
         <br /><a href="<?php echo $url;?>"><?php echo $name;?></a><br />
         <?php
     }
             
-    function display_site_info()    //Êä³öÕ¾µãÐÅÏ¢
+    function display_site_info()    //è¾“å‡ºç«™ç‚¹ä¿¡æ¯
     {
         ?>
         <ul>
@@ -62,7 +62,7 @@
         <?php
     }
                       
-    function display_login_form()    //Êä³öµÇÂ¼ÐÅÏ¢
+    function display_login_form()    //è¾“å‡ºç™»å½•ä¿¡æ¯
     {
         ?>
         <p><a href="register_form.php">Not a member?</a></p>
@@ -90,7 +90,7 @@
         <?php
     }
             
-    function display_registeration_form()   //Êä³ö×¢²á±íµ¥
+    function display_registeration_form()   //è¾“å‡ºæ³¨å†Œè¡¨å•
     {
         ?>
         <form method="post" action="register_new.php">
@@ -119,7 +119,7 @@
         <?php
     }
             
-    function display_user_urls($url_array)  //Êä³öÓÃ»§µÄÊéÇ©ºÍURL
+    function display_user_urls($url_array)  //è¾“å‡ºç”¨æˆ·çš„ä¹¦ç­¾å’ŒURL
     {
         global $bm_table;
         $bm_table = true;
@@ -141,7 +141,7 @@
                             $color = "#ffffff";
                         else
                             $color = "#cccccc";
-                        //Êý¾Ý¿â´«»ØÊý¾ÝÊ±£¬Òª°ÑÒ»Ð©Ô¤¶¨ÒåµÄ×Ö·û×ª»»Îª HTML ÊµÌå
+                        //æ•°æ®åº“ä¼ å›žæ•°æ®æ—¶ï¼Œè¦æŠŠä¸€äº›é¢„å®šä¹‰çš„å­—ç¬¦è½¬æ¢ä¸º HTML å®žä½“
                         echo "<tr bgcolor=\"". $color ."\"><td><a href=\"". $url ."\">". htmlspecialchars($url) ."</a></td><td><input type=\"checkbox\" name=\"del_me[]\" value=\"". $url ."\"/></td></tr>";
                     }
                 }
@@ -155,14 +155,14 @@
         <?php
     }
             
-    function display_user_menu()    //Êä³ö²Ëµ¥Ñ¡Ïî
+    function display_user_menu()    //è¾“å‡ºèœå•é€‰é¡¹
     {
         ?>
         <hr />
         <a href="member.php">Home</a>&nbsp;|&nbsp;
         <a href="add_bm_form.php">Add BM</a> &nbsp;|&nbsp;
         <?php
-            //Èç¹ûÊéÇ©ÔÚÕâ¸öÒ³Ãæ£¬Ìá¹©É¾³ýÑ¡Ïî
+            //å¦‚æžœä¹¦ç­¾åœ¨è¿™ä¸ªé¡µé¢ï¼Œæä¾›åˆ é™¤é€‰é¡¹
             global $bm_table;
             if($bm_table == true)
             {
@@ -181,7 +181,7 @@
         <?php
     }
             
-    function display_add_bm_form()  //Êä³öÌí¼ÓÊéÇ©±íµ¥
+    function display_add_bm_form()  //è¾“å‡ºæ·»åŠ ä¹¦ç­¾è¡¨å•
     {
         ?>
         <form name="bm_table" action="add_bms.php" method="post">
@@ -198,7 +198,7 @@
         <?php
     }
             
-    function display_password_form()    //Êä³ö¸ü¸ÄÃÜÂë±íµ¥
+    function display_password_form()    //è¾“å‡ºæ›´æ”¹å¯†ç è¡¨å•
     {
         ?>
         <br />
@@ -225,7 +225,7 @@
         <?php
     }
             
-    function display_forgot_form()    //Êä³öÖØÖÃÃÜÂë±íµ¥
+    function display_forgot_form()    //è¾“å‡ºé‡ç½®å¯†ç è¡¨å•
     {
         ?>
         <br />
@@ -244,7 +244,7 @@
         <?php
     }
     
-    function display_recommended_urls($url_array)   //Êä³öÍÆ¼ö±íµ¥
+    function display_recommended_urls($url_array)   //è¾“å‡ºæŽ¨èè¡¨å•
     {
         ?>
         <br />

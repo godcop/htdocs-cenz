@@ -1,11 +1,11 @@
-<?php
+ï»¿<?php
 
 /**
  * @author switch
  * @copyright 2015
- * Á¬½ÓÊý¾Ý¿âµÄº¯Êý
+ * è¿žæŽ¥æ•°æ®åº“çš„å‡½æ•°
  */
-    function db_connect()   //Á¬½ÓÊý¾Ý¿âº¯Êý
+    function db_connect()   //è¿žæŽ¥æ•°æ®åº“å‡½æ•°
     {
         $result = new mysqli('localhost', 'bm_user', 'password', 'bookmarks');
         if (!$result) 

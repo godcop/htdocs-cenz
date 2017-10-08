@@ -1,4 +1,4 @@
-create database bookmarks;
+﻿create database bookmarks;
 use bookmarks;
 
 create table user  (

@@ -1,15 +1,15 @@
-<?php
+ï»¿<?php
 
 /**
  * @author switch
  * @copyright 2015
- * ÖØÐÂÉèÖÃÒÅÍüÃÜÂëµÄ½Å±¾
+ * é‡æ–°è®¾ç½®é—å¿˜å¯†ç çš„è„šæœ¬
  */
-    //require_onceÓï¾äºÍrequireÓï¾äÍêÈ«ÏàÍ¬,Î¨Ò»Çø±ðÊÇPHP»á¼ì²é¸ÃÎÄ¼þÊÇ·ñÒÑ¾­±»°üº¬¹ý,Èç¹ûÊÇÔò²»»áÔÙ´Î°üº¬¡£
+    //require_onceè¯­å¥å’Œrequireè¯­å¥å®Œå…¨ç›¸åŒ,å”¯ä¸€åŒºåˆ«æ˜¯PHPä¼šæ£€æŸ¥è¯¥æ–‡ä»¶æ˜¯å¦å·²ç»è¢«åŒ…å«è¿‡,å¦‚æžœæ˜¯åˆ™ä¸ä¼šå†æ¬¡åŒ…å«ã€‚
     require_once('bookmark_fns.php');
     do_html_header("Resetting password");
     
-    //´´½¨±äÁ¿
+    //åˆ›å»ºå˜é‡
     $username = $_POST['username'];
     
     try
