@@ -11,7 +11,7 @@ require_once('getbinginfo.php');
 	<meta name="keywords" content="CENZ 2.0beta1"/>
 	<title>橙子 - 精彩每一天！</title>
 	<link rel="shortcut icon" href="favicon.ico">
-	<link href="style/style_a.css" rel="stylesheet" media="screen"/>
+	<link href="style/style_own.css" rel="stylesheet" media="screen"/>
 	<script type="text/javascript">
 		var p_smallPic = '',p_smallUrl = '',p_bgPics = [],p_bgPic = [];
 		function $$(id){
@@ -30,21 +30,66 @@ require_once('getbinginfo.php');
 </div>
 
 <div class="nav_full" id="nav_full">
-	<div class="readme">
-		<div><a class="nav_full_h1">常用网址 Site Navigation</a></div>
-		<div class="lrtk">
-		  <a href="http://pan.baidu.com/" class="box01" target="_blank" title="百度网盘"></a>
-		  <a href="http://www.virscan.org/" class="box02" target="_blank" title="免费的多引擎在线文件病毒扫描"></a>
-		  <a href="http://www.mi.com/" class="box03" target="_blank" title="小米网"></a>
-		  <a href="http://www.zhihu.com/" class="box04" target="_blank" title="知乎-与世界分享你的知识、经验和见解"></a>
-		  <a href="http://naotu.baidu.com/" class="box05" target="_blank" title="百度脑图-便捷的思维工具"></a>
-		  <a href="http://www.youku.com/" class="box06" target="_blank" title="优酷"></a>
-		  <a href="http://www.tianditucq.com/" class="box07" target="_blank" title="天地图·重庆"></a>
-		  <a href="http://fanyi.youdao.com/" class="box08" target="_blank" title="有道翻译"></a>
-		  <a href="http://www.bing.com/" class="box09" target="_blank" title="微软必应搜索"></a>
-		  <a href="http://www.wedcq.com/" class="box10" target="_blank" title="地产圈"></a>
-		  <a href="http://www.tiexue.net/" class="box11" target="_blank" title="铁血网"></a>
-		  <a href="http://www.mawanli.cn/" class="box12" target="_blank" title="麻豌粒"></a>      
+	<div class="nav_main">
+		<div class="nav_nav">
+			顶部导航
+		</div>
+		<div class="content">
+			<div class="marks">
+				网址标签
+			</div>
+			<div class="marks">
+				网址标签
+			</div>
+			<div class="marks">
+				网址标签
+			</div>
+			<div class="marks">
+				网址标签
+			</div>
+			<div class="marks">
+				网址标签
+			</div>
+			<div class="marks">
+				网址标签
+			</div>
+			<div class="marks">
+				网址标签
+			</div>
+			<div class="marks">
+				网址标签
+			</div>
+			<div class="marks">
+				网址标签
+			</div>
+			<div class="marks">
+				网址标签
+			</div>
+			<div class="marks">
+				网址标签
+			</div>
+			<div class="marks">
+				网址标签
+			</div>
+			<div class="marks">
+				网址标签
+			</div>
+			<div class="marks">
+				网址标签
+			</div>
+			<div class="marks">
+				网址标签
+			</div>
+			<div class="marks">
+				网址标签
+			</div>
+			a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>
+			a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>
+			a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>
+			a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>
+			a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>
+			a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>
+			a</br>a</br>a</br>a</br>a</br>结束
 		</div>
 	</div>
 </div>

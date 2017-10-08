@@ -352,6 +352,7 @@ a:hover ul {
     display: none;
 	/*background-color:#333;*/
 	z-index:3;
+	overflow:auto;
 }
 
 /*实现左侧全屏菜单背景磨砂玻璃效果*/
@@ -386,10 +387,7 @@ a:hover ul {
 	cursor: pointer;
 }
 
-
-
 .dicen {
-
 	position: fixed;
     top: 90px;
     right: 0;
@@ -415,3 +413,40 @@ a:hover ul {
 .box10{width:306px;height:146px;float:left;background:url(img/nav_bg.png) no-repeat -320px -320px}
 .box11{width:146px;height:146px;float:left;background:url(img/nav_bg.png) no-repeat -640px -320px}
 .box12{width:306px;height:146px;float:left;background:url(img/nav_bg.png) no-repeat -800px -320px}
+
+.nav_main {
+	width: 1190px;
+	margin:0 auto;
+	
+}
+
+.nav_nav {
+	width:100%;
+	height:45px;
+	background-color:#007daa;
+}
+
+.content {
+	margin:20px 0px 0px 0px;
+}
+
+.marks {
+	width:278px;
+	height:145px;
+	margin:0px 8px 16px 8px;
+	border:1px solid #aaa;
+	overflow:hidden;
+	border-radius:5px;
+	background:rgba(255,255,255,0.5);
+	float:left;
+	color:#333;
+}
+
+
+
+
+
+
+
+
+
