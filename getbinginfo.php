@@ -1,77 +1,79 @@
-<?php
-//È«ĞÂPHP»ñÈ¡±ØÓ¦Ê×Ò³ĞÅÏ¢´úÂë
-//0ÈÕÇ°Í¼Æ¬
-$imgstr0=file_get_contents('http://cn.bing.com/HPImageArchive.aspx?idx=0&n=1&mkt=zh-CN');//»ñÈ¡0ÈÕÇ°Í¼Æ¬½Ó¿Ú
-$storystr0=file_get_contents('http://cn.bing.com/cnhp/coverstory/');//»ñÈ¡¹ÊÊÂ½Ó¿Ú
-preg_match("/<urlBase>(.+?)<\/urlBase>/ies",$imgstr0,$imgmatches0);
-$imgurl0='http://cn.bing.com'.$imgmatches0[1].'_1920x1080.jpg';//0ÈÕÇ°Í¼Æ¬Á´½ÓµØÖ·
-preg_match("/<copyright>(.+?)<\/copyright>/ies",$imgstr0,$copyrightmatches0);
-$imgtitle0=strstr($copyrightmatches0[1],'£¬',true);//Í¼Æ¬½éÉÜ±êÌâ
-$imgaddress0=substr(strstr(strstr($copyrightmatches0[1],'(',true),'£¬'),3);//Í¼Æ¬ÅÄÉãµØµã
-$imgauthor0=strstr(substr(strstr($copyrightmatches0[1],'('),4),')',true);//Í¼Æ¬×÷ÕßĞÅÏ¢
-preg_match("/para1\":\"(.+?)\",\"para2\"/ies",$storystr0,$storymatches0);
-$story0=$storymatches0[1];//Í¼Æ¬¹ÊÊÂ
+ï»¿<?php
 
-//1ÈÕÇ°Í¼Æ¬
+//å…¨æ–°PHPè·å–å¿…åº”é¦–é¡µä¿¡æ¯ä»£ç 
+//0æ—¥å‰å›¾ç‰‡
+$imgstr0=file_get_contents('http://cn.bing.com/HPImageArchive.aspx?idx=0&n=1&mkt=zh-CN');//è·å–0æ—¥å‰å›¾ç‰‡æ¥å£
+$storystr0=file_get_contents('http://cn.bing.com/cnhp/coverstory/');//è·å–æ•…äº‹æ¥å£
+preg_match("/<urlBase>(.+?)<\/urlBase>/ies",$imgstr0,$imgmatches0);
+$imgurl0='http://cn.bing.com'.$imgmatches0[1].'_1920x1080.jpg';//0æ—¥å‰å›¾ç‰‡é“¾æ¥åœ°å€
+preg_match("/<copyright>(.+?)<\/copyright>/ies",$imgstr0,$copyrightmatches0);
+$imgtitle0=strstr($copyrightmatches0[1],'ï¼Œ',true);//å›¾ç‰‡ä»‹ç»æ ‡é¢˜
+$imgaddress0=substr(strstr(strstr($copyrightmatches0[1],'(',true),'ï¼Œ'),3);//å›¾ç‰‡æ‹æ‘„åœ°ç‚¹
+$imgauthor0=strstr(substr(strstr($copyrightmatches0[1],'('),4),')',true);//å›¾ç‰‡ä½œè€…ä¿¡æ¯
+preg_match("/para1\":\"(.+?)\",\"para2\"/ies",$storystr0,$storymatches0);
+$story0=$storymatches0[1];//å›¾ç‰‡æ•…äº‹
+
+//1æ—¥å‰å›¾ç‰‡
 $imgstr1=file_get_contents('http://cn.bing.com/HPImageArchive.aspx?idx=1&n=1&mkt=zh-CN');
 preg_match("/<urlBase>(.+?)<\/urlBase>/ies",$imgstr1,$imgmatches1);
-$imgurl1='http://cn.bing.com'.$imgmatches1[1].'_1920x1080.jpg';//1ÈÕÇ°Í¼Æ¬Á´½ÓµØÖ·
+$imgurl1='http://cn.bing.com'.$imgmatches1[1].'_1920x1080.jpg';//1æ—¥å‰å›¾ç‰‡é“¾æ¥åœ°å€
 preg_match("/<copyright>(.+?)<\/copyright>/ies",$imgstr1,$copyrightmatches1);
-$imgtitle1=strstr($copyrightmatches1[1],'£¬',true);//Í¼Æ¬½éÉÜ±êÌâ
-$imgaddress1=substr(strstr(strstr($copyrightmatches1[1],'(',true),'£¬'),3);//Í¼Æ¬ÅÄÉãµØµã
-$imgauthor1=strstr(substr(strstr($copyrightmatches1[1],'('),4),')',true);//Í¼Æ¬×÷ÕßĞÅÏ¢
+$imgtitle1=strstr($copyrightmatches1[1],'ï¼Œ',true);//å›¾ç‰‡ä»‹ç»æ ‡é¢˜
+$imgaddress1=substr(strstr(strstr($copyrightmatches1[1],'(',true),'ï¼Œ'),3);//å›¾ç‰‡æ‹æ‘„åœ°ç‚¹
+$imgauthor1=strstr(substr(strstr($copyrightmatches1[1],'('),4),')',true);//å›¾ç‰‡ä½œè€…ä¿¡æ¯
 
-//2ÈÕÇ°Í¼Æ¬
+//2æ—¥å‰å›¾ç‰‡
 $imgstr2=file_get_contents('http://cn.bing.com/HPImageArchive.aspx?idx=2&n=1&mkt=zh-CN');
 preg_match("/<urlBase>(.+?)<\/urlBase>/ies",$imgstr2,$imgmatches2);
-$imgurl2='http://cn.bing.com'.$imgmatches2[1].'_1920x1080.jpg';//2ÈÕÇ°Í¼Æ¬Á´½ÓµØÖ·
+$imgurl2='http://cn.bing.com'.$imgmatches2[1].'_1920x1080.jpg';//2æ—¥å‰å›¾ç‰‡é“¾æ¥åœ°å€
 preg_match("/<copyright>(.+?)<\/copyright>/ies",$imgstr2,$copyrightmatches2);
-$imgtitle2=strstr($copyrightmatches2[1],'£¬',true);//Í¼Æ¬½éÉÜ±êÌâ
-$imgaddress2=substr(strstr(strstr($copyrightmatches2[1],'(',true),'£¬'),3);//Í¼Æ¬ÅÄÉãµØµã
-$imgauthor2=strstr(substr(strstr($copyrightmatches2[1],'('),4),')',true);//Í¼Æ¬×÷ÕßĞÅÏ¢
+$imgtitle2=strstr($copyrightmatches2[1],'ï¼Œ',true);//å›¾ç‰‡ä»‹ç»æ ‡é¢˜
+$imgaddress2=substr(strstr(strstr($copyrightmatches2[1],'(',true),'ï¼Œ'),3);//å›¾ç‰‡æ‹æ‘„åœ°ç‚¹
+$imgauthor2=strstr(substr(strstr($copyrightmatches2[1],'('),4),')',true);//å›¾ç‰‡ä½œè€…ä¿¡æ¯
 
-//3ÈÕÇ°Í¼Æ¬
+//3æ—¥å‰å›¾ç‰‡
 $imgstr3=file_get_contents('http://cn.bing.com/HPImageArchive.aspx?idx=3&n=1&mkt=zh-CN');
 preg_match("/<urlBase>(.+?)<\/urlBase>/ies",$imgstr3,$imgmatches3);
-$imgurl3='http://cn.bing.com'.$imgmatches3[1].'_1920x1080.jpg';//3ÈÕÇ°Í¼Æ¬Á´½ÓµØÖ·
+$imgurl3='http://cn.bing.com'.$imgmatches3[1].'_1920x1080.jpg';//3æ—¥å‰å›¾ç‰‡é“¾æ¥åœ°å€
 preg_match("/<copyright>(.+?)<\/copyright>/ies",$imgstr3,$copyrightmatches3);
-$imgtitle3=strstr($copyrightmatches3[1],'£¬',true);//Í¼Æ¬½éÉÜ±êÌâ
-$imgaddress3=substr(strstr(strstr($copyrightmatches3[1],'(',true),'£¬'),3);//Í¼Æ¬ÅÄÉãµØµã
-$imgauthor3=strstr(substr(strstr($copyrightmatches3[1],'('),4),')',true);//Í¼Æ¬×÷ÕßĞÅÏ¢
+$imgtitle3=strstr($copyrightmatches3[1],'ï¼Œ',true);//å›¾ç‰‡ä»‹ç»æ ‡é¢˜
+$imgaddress3=substr(strstr(strstr($copyrightmatches3[1],'(',true),'ï¼Œ'),3);//å›¾ç‰‡æ‹æ‘„åœ°ç‚¹
+$imgauthor3=strstr(substr(strstr($copyrightmatches3[1],'('),4),')',true);//å›¾ç‰‡ä½œè€…ä¿¡æ¯
 
-//4ÈÕÇ°Í¼Æ¬
+//4æ—¥å‰å›¾ç‰‡
 $imgstr4=file_get_contents('http://cn.bing.com/HPImageArchive.aspx?idx=4&n=1&mkt=zh-CN');
 preg_match("/<urlBase>(.+?)<\/urlBase>/ies",$imgstr4,$imgmatches4);
-$imgurl4='http://cn.bing.com'.$imgmatches4[1].'_1920x1080.jpg';//4ÈÕÇ°Í¼Æ¬Á´½ÓµØÖ·
+$imgurl4='http://cn.bing.com'.$imgmatches4[1].'_1920x1080.jpg';//4æ—¥å‰å›¾ç‰‡é“¾æ¥åœ°å€
 preg_match("/<copyright>(.+?)<\/copyright>/ies",$imgstr4,$copyrightmatches4);
-$imgtitle4=strstr($copyrightmatches4[1],'£¬',true);//Í¼Æ¬½éÉÜ±êÌâ
-$imgaddress4=substr(strstr(strstr($copyrightmatches4[1],'(',true),'£¬'),3);//Í¼Æ¬ÅÄÉãµØµã
-$imgauthor4=strstr(substr(strstr($copyrightmatches4[1],'('),4),')',true);//Í¼Æ¬×÷ÕßĞÅÏ¢
+$imgtitle4=strstr($copyrightmatches4[1],'ï¼Œ',true);//å›¾ç‰‡ä»‹ç»æ ‡é¢˜
+$imgaddress4=substr(strstr(strstr($copyrightmatches4[1],'(',true),'ï¼Œ'),3);//å›¾ç‰‡æ‹æ‘„åœ°ç‚¹
+$imgauthor4=strstr(substr(strstr($copyrightmatches4[1],'('),4),')',true);//å›¾ç‰‡ä½œè€…ä¿¡æ¯
 
-//5ÈÕÇ°Í¼Æ¬
+//5æ—¥å‰å›¾ç‰‡
 $imgstr5=file_get_contents('http://cn.bing.com/HPImageArchive.aspx?idx=5&n=1&mkt=zh-CN');
 preg_match("/<urlBase>(.+?)<\/urlBase>/ies",$imgstr5,$imgmatches5);
-$imgurl5='http://cn.bing.com'.$imgmatches5[1].'_1920x1080.jpg';//5ÈÕÇ°Í¼Æ¬Á´½ÓµØÖ·
+$imgurl5='http://cn.bing.com'.$imgmatches5[1].'_1920x1080.jpg';//5æ—¥å‰å›¾ç‰‡é“¾æ¥åœ°å€
 preg_match("/<copyright>(.+?)<\/copyright>/ies",$imgstr5,$copyrightmatches5);
-$imgtitle5=strstr($copyrightmatches5[1],'£¬',true);//Í¼Æ¬½éÉÜ±êÌâ
-$imgaddress5=substr(strstr(strstr($copyrightmatches5[1],'(',true),'£¬'),3);//Í¼Æ¬ÅÄÉãµØµã
-$imgauthor5=strstr(substr(strstr($copyrightmatches5[1],'('),4),')',true);//Í¼Æ¬×÷ÕßĞÅÏ¢
+$imgtitle5=strstr($copyrightmatches5[1],'ï¼Œ',true);//å›¾ç‰‡ä»‹ç»æ ‡é¢˜
+$imgaddress5=substr(strstr(strstr($copyrightmatches5[1],'(',true),'ï¼Œ'),3);//å›¾ç‰‡æ‹æ‘„åœ°ç‚¹
+$imgauthor5=strstr(substr(strstr($copyrightmatches5[1],'('),4),')',true);//å›¾ç‰‡ä½œè€…ä¿¡æ¯
 
-//6ÈÕÇ°Í¼Æ¬
+//6æ—¥å‰å›¾ç‰‡
 $imgstr6=file_get_contents('http://cn.bing.com/HPImageArchive.aspx?idx=6&n=1&mkt=zh-CN');
 preg_match("/<urlBase>(.+?)<\/urlBase>/ies",$imgstr6,$imgmatches6);
-$imgurl6='http://cn.bing.com'.$imgmatches6[1].'_1920x1080.jpg';//6ÈÕÇ°Í¼Æ¬Á´½ÓµØÖ·
+$imgurl6='http://cn.bing.com'.$imgmatches6[1].'_1920x1080.jpg';//6æ—¥å‰å›¾ç‰‡é“¾æ¥åœ°å€
 preg_match("/<copyright>(.+?)<\/copyright>/ies",$imgstr6,$copyrightmatches6);
-$imgtitle6=strstr($copyrightmatches2[1],'£¬',true);//Í¼Æ¬½éÉÜ±êÌâ
-$imgaddress6=substr(strstr(strstr($copyrightmatches6[1],'(',true),'£¬'),3);//Í¼Æ¬ÅÄÉãµØµã
-$imgauthor6=strstr(substr(strstr($copyrightmatches6[1],'('),4),')',true);//Í¼Æ¬×÷ÕßĞÅÏ¢
+$imgtitle6=strstr($copyrightmatches2[1],'ï¼Œ',true);//å›¾ç‰‡ä»‹ç»æ ‡é¢˜
+$imgaddress6=substr(strstr(strstr($copyrightmatches6[1],'(',true),'ï¼Œ'),3);//å›¾ç‰‡æ‹æ‘„åœ°ç‚¹
+$imgauthor6=strstr(substr(strstr($copyrightmatches6[1],'('),4),')',true);//å›¾ç‰‡ä½œè€…ä¿¡æ¯
 
-//7ÈÕÇ°Í¼Æ¬
+//7æ—¥å‰å›¾ç‰‡
 $imgstr7=file_get_contents('http://cn.bing.com/HPImageArchive.aspx?idx=7&n=1&mkt=zh-CN');
 preg_match("/<urlBase>(.+?)<\/urlBase>/ies",$imgstr7,$imgmatches7);
-$imgurl7='http://cn.bing.com'.$imgmatches7[1].'_1920x1080.jpg';//7ÈÕÇ°Í¼Æ¬Á´½ÓµØÖ·
+$imgurl7='http://cn.bing.com'.$imgmatches7[1].'_1920x1080.jpg';//7æ—¥å‰å›¾ç‰‡é“¾æ¥åœ°å€
 preg_match("/<copyright>(.+?)<\/copyright>/ies",$imgstr7,$copyrightmatches7);
-$imgtitle7=strstr($copyrightmatches7[1],'£¬',true);//Í¼Æ¬½éÉÜ±êÌâ
-$imgaddress7=substr(strstr(strstr($copyrightmatches7[1],'(',true),'£¬'),3);//Í¼Æ¬ÅÄÉãµØµã
-$imgauthor7=strstr(substr(strstr($copyrightmatches7[1],'('),4),')',true);//Í¼Æ¬×÷ÕßĞÅÏ¢
+$imgtitle7=strstr($copyrightmatches7[1],'ï¼Œ',true);//å›¾ç‰‡ä»‹ç»æ ‡é¢˜
+$imgaddress7=substr(strstr(strstr($copyrightmatches7[1],'(',true),'ï¼Œ'),3);//å›¾ç‰‡æ‹æ‘„åœ°ç‚¹
+$imgauthor7=strstr(substr(strstr($copyrightmatches7[1],'('),4),')',true);//å›¾ç‰‡ä½œè€…ä¿¡æ¯
+
 ?>
