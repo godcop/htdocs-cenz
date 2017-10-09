@@ -166,4 +166,7 @@ function fb_button(a){
             infoflag = 0;
         }
     });
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of b0b453a... own.php一些列美化
