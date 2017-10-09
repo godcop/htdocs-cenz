@@ -472,18 +472,10 @@ a:hover ul {
 .nav_nav ul:hover {
 	color:#363636;
 	background-color:#fff;
-	height:47px;
-	border-bottom:3px solid #007daa;
+	height:45px;
+	border-bottom:5px solid #007daa;
 }
 
-.fixednav {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    z-index: 30;
-
-}
 
 
 

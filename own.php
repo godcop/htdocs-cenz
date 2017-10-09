@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include ('getbinginfo.php');
 ?>
 <!doctype html>
