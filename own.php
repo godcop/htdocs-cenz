@@ -26,14 +26,18 @@ include ('getbinginfo.php');
 </div>
 
 <div class="nav_full_bg">
-	<img id="nav_full_img" height="100%" width="100%"/>
+	<!--<img id="nav_full_img" height="100%" width="100%"/>-->
 </div>
 
 <div class="nav_full" id="nav_full">
-	<div class="nav_main">
+	<div class="nav_nav_bg">
 		<div class="nav_nav">
-			顶部导航
+			<a href="http://www.baidu.com" target="_blank"><ul>主页</ul></a>
+			<a href="http://www.baidu.com" target="_blank"><ul>第一分类</ul></a>
+			<a href="http://www.baidu.com" target="_blank"><ul>第二分类</ul></a>
 		</div>
+	</div>
+	<div class="nav_main">
 		<div class="content">
 			<div class="marks">
 				网址标签
@@ -233,7 +237,7 @@ document.getElementById("info_title_b").innerHTML=jsbinginfo[2];
 document.getElementById("info_title_c").innerHTML=jsbinginfo[3] + "&ensp;|&ensp;" + jsbinginfo[4];
 document.getElementById("info_story").innerHTML=jsbinginfo[5];
 document.getElementById("downloadimg").href=jsbinginfo[0];
-document.getElementById("nav_full_img").src=jsbinginfo[0];
+//document.getElementById("nav_full_img").src=jsbinginfo[0];
 
     //第一段js
     var styleList = [];
