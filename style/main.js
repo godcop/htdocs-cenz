@@ -1,11 +1,11 @@
-ï»¿//å·¦å³æŒ‰é’®åŠ¨ä½œå‡½æ•°å¼€å§‹
+//×óÓÒ°´Å¥¶¯×÷º¯Êı¿ªÊ¼
 function fb_button(a){
-		//æ ¹æ®ç‚¹å‡»å·¦å³æŒ‰é’®åŠ å‡bingflagæ•°å€¼
+		//¸ù¾İµã»÷×óÓÒ°´Å¥¼Ó¼õbingflagÊıÖµ
         bingflag=bingflag+a;
         if(bingflag<0)bingflag=0;
 		if(bingflag>7)bingflag=7;
 		
-		//æ ¹æ®bingflagæ•°å€¼é€‰æ‹©å›¾ç‰‡å¼€å§‹
+		//¸ù¾İbingflagÊıÖµÑ¡ÔñÍ¼Æ¬¿ªÊ¼
 		switch(bingflag)
 		{
 		case 0:
@@ -36,7 +36,7 @@ function fb_button(a){
 		  jsbinginfo = jsbinginfo0;
 		}
 
-		//å‘æŒ‡å®šidè¾“å‡ºhtmlä»£ç 
+		//ÏòÖ¸¶¨idÊä³öhtml´úÂë
 		document.getElementById("info_bingimg").innerHTML=jsbinginfo[1];
 		document.getElementById("info_title_b").innerHTML=jsbinginfo[2];
 		document.getElementById("info_title_c").innerHTML=jsbinginfo[3] + "&ensp;|&ensp;" + jsbinginfo[4];
@@ -44,13 +44,13 @@ function fb_button(a){
 		document.getElementById("downloadimg").href=jsbinginfo[0];
 		document.getElementById("nav_full_img").src=jsbinginfo[0];
 
-    //ç¬¬ä¸€æ®µjs
+    //µÚÒ»¶Îjs
     var styleList = [];
     function callback_179_config(params){
         styleList = params.list || [];
     }
 
-    //ç¬¬äºŒæ®µjs
+    //µÚ¶ş¶Îjs
     var bg_img = $$('lay_bg_img');
     if(styleList.length === 0){
         styleList.push({
@@ -59,7 +59,7 @@ function fb_button(a){
     }
     var randomData = Math.floor(Math.random() * styleList.length);
 
-    //ç¬¬ä¸‰æ®µjs
+    //µÚÈı¶Îjs
     window.QZFL = window.QZONE = window.QZFL || window.QZONE || {};
     QZFL.dom = {
         getClientHeight:function(doc){
@@ -115,11 +115,11 @@ function fb_button(a){
         },
     };
     QZONE.LoginPage.bootStrap();
-//æ ¹æ®bingflagæ•°å€¼é€‰æ‹©å›¾ç‰‡ç»“æŸ		
-}//å·¦å³æŒ‰é’®åŠ¨ä½œå‡½æ•°ç»“æŸ
+//¸ù¾İbingflagÊıÖµÑ¡ÔñÍ¼Æ¬½áÊø		
+}//×óÓÒ°´Å¥¶¯×÷º¯Êı½áÊø
 
 
-	//å³ä¾§èœå•æ»‘å‡ºjs
+	//ÓÒ²à²Ëµ¥»¬³öjs
     var flag = 0;
     jQuery('.li_right_menu').click(function() {
         if(flag == 0) {
@@ -141,14 +141,14 @@ function fb_button(a){
         }
     });
 	
-	//å·¦ä¾§èœå•æ»‘å‡ºjs
+	//×ó²à²Ëµ¥»¬³öjs
         $(document).ready(function(){
         $('.nav_left').click(function(){
             $('.nav_full,.nav_full_bg').animate({width:'toggle'},350);
         });
     });
 	
-	//å¼¹å‡ºä»Šæ—¥ç¾å›¾æ•…äº‹js
+	//µ¯³ö½ñÈÕÃÀÍ¼¹ÊÊÂjs
 	var infoflag = 0;
     jQuery('.fb_info').click(function() {
         if(infoflag == 0) {
@@ -166,10 +166,19 @@ function fb_button(a){
             infoflag = 0;
         }
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> parent of b0b453a... own.phpä¸€äº›åˆ—ç¾åŒ–
-=======
->>>>>>> parent of b0b453a... own.phpä¸€äº›åˆ—ç¾åŒ–
+//µ¼º½Ò³Ãæ¶¥²¿²Ëµ¥¹Ì¶¨
+$(function(){
+var nav=$(".nav_nav_bg"); //µÃµ½µ¼º½¶ÔÏó
+var win=$(window); //µÃµ½´°¿Ú¶ÔÏó
+var sc=$(document);//µÃµ½documentÎÄµµ¶ÔÏó¡£
+win.scroll(function(){
+  if(sc.scrollTop()>=100){
+    nav.addClass("fixednav"); 
+   $(".navTmp").fadeIn(); 
+  }else{
+   nav.removeClass("fixednav");
+   $(".navTmp").fadeOut();
+  }
+})  
+})
