@@ -415,15 +415,16 @@ a:hover ul {
 .box12{width:306px;height:146px;float:left;background:url(img/nav_bg.png) no-repeat -800px -320px}
 
 .nav_main {
-	width: 1190px;
+	width: 1184px;
 	margin:0 auto;
 	
 }
 
 .nav_nav {
-	width:100%;
+	width:1168px;
 	height:45px;
-	background-color:#007daa;
+	background-color:#fff;
+	margin:0px 8px 0px 8px;
 }
 
 .content {

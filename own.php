@@ -80,9 +80,6 @@ include ('getbinginfo.php');
 			<div class="marks">
 				网址标签
 			</div>
-			<div class="marks">
-				网址标签
-			</div>
 			a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>
 			a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>
 			a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>
