@@ -30,14 +30,15 @@ include ('getbinginfo.php');
 </div>
 
 <div class="nav_full" id="nav_full">
-	<div class="nav_nav_bg">
-		<div class="nav_nav">
-			<a href="http://www.baidu.com" target="_blank"><ul>主页</ul></a>
-			<a href="http://www.baidu.com" target="_blank"><ul>第一分类</ul></a>
-			<a href="http://www.baidu.com" target="_blank"><ul>第二分类</ul></a>
-		</div>
+	<div class="nav_nav_bg" id="nav_nav_bg">
+		<ul class="nav_nav">
+			<a href="http://www.baidu.com" target="_blank"><li>主页</li></a>
+			<a href="http://www.baidu.com" target="_blank"><li>精选站点</li></a>
+			<a href="http://www.baidu.com" target="_blank"><li>常用网址</li></a>
+			<a href="http://www.baidu.com" target="_blank"><li>参考文件</li></a>
+		</ul>
 	</div>
-	<div class="nav_main">
+	<div class="nav_main" id="nav_main">
 		<div class="content">
 			<div class="marks">
 				网址标签

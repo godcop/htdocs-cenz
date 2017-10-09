@@ -1,11 +1,11 @@
-//���Ұ�ť����������ʼ
+﻿//左右按钮动作函数开始
 function fb_button(a){
-		//���ݵ�����Ұ�ť�Ӽ�bingflag��ֵ
+		//根据点击左右按钮加减bingflag数值
         bingflag=bingflag+a;
         if(bingflag<0)bingflag=0;
 		if(bingflag>7)bingflag=7;
 		
-		//����bingflag��ֵѡ��ͼƬ��ʼ
+		//根据bingflag数值选择图片开始
 		switch(bingflag)
 		{
 		case 0:
@@ -36,7 +36,7 @@ function fb_button(a){
 		  jsbinginfo = jsbinginfo0;
 		}
 
-		//��ָ��id���html����
+		//向指定id输出html代码
 		document.getElementById("info_bingimg").innerHTML=jsbinginfo[1];
 		document.getElementById("info_title_b").innerHTML=jsbinginfo[2];
 		document.getElementById("info_title_c").innerHTML=jsbinginfo[3] + "&ensp;|&ensp;" + jsbinginfo[4];
@@ -44,13 +44,13 @@ function fb_button(a){
 		document.getElementById("downloadimg").href=jsbinginfo[0];
 		document.getElementById("nav_full_img").src=jsbinginfo[0];
 
-    //��һ��js
+    //第一段js
     var styleList = [];
     function callback_179_config(params){
         styleList = params.list || [];
     }
 
-    //�ڶ���js
+    //第二段js
     var bg_img = $$('lay_bg_img');
     if(styleList.length === 0){
         styleList.push({
@@ -59,7 +59,7 @@ function fb_button(a){
     }
     var randomData = Math.floor(Math.random() * styleList.length);
 
-    //������js
+    //第三段js
     window.QZFL = window.QZONE = window.QZFL || window.QZONE || {};
     QZFL.dom = {
         getClientHeight:function(doc){
@@ -115,11 +115,11 @@ function fb_button(a){
         },
     };
     QZONE.LoginPage.bootStrap();
-//����bingflag��ֵѡ��ͼƬ����		
-}//���Ұ�ť������������
+//根据bingflag数值选择图片结束		
+}//左右按钮动作函数结束
 
 
-	//�Ҳ�˵�����js
+	//右侧菜单滑出js
     var flag = 0;
     jQuery('.li_right_menu').click(function() {
         if(flag == 0) {
@@ -141,14 +141,14 @@ function fb_button(a){
         }
     });
 	
-	//���˵�����js
+	//左侧菜单滑出js
         $(document).ready(function(){
         $('.nav_left').click(function(){
             $('.nav_full,.nav_full_bg').animate({width:'toggle'},350);
         });
     });
 	
-	//����������ͼ����js
+	//弹出今日美图故事js
 	var infoflag = 0;
     jQuery('.fb_info').click(function() {
         if(infoflag == 0) {
@@ -166,3 +166,16 @@ function fb_button(a){
             infoflag = 0;
         }
     });
+	
+	
+	
+window.onscroll=function(){
+var topScroll =document.$('nav_full').scrollTop;//滚动的距离,距离顶部的距离
+var bignav = document.getElementById("nav_nav_bg");//获取到导航栏id
+if(topScroll > 50){ //当滚动距离大于50px时执行下面的东西
+	bignav.style.position = 'fixed';
+}else{//当滚动距离小于50的时候执行下面的内容，也就是让导航栏恢复原状
+	bignav.style.position = 'static';
+	}
+}	
+	

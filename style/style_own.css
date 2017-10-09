@@ -20,6 +20,7 @@ ul ,li {
 	margin: 0;
 	border: 0;
 	padding: 0;
+	list-style:none;
 }
 
 .lay_header {
@@ -426,7 +427,6 @@ a:hover ul {
 	background-color:#363636;
 	border-bottom:2px solid #e3e3e3;
 	display:block;
-	
 }
 
 .nav_nav {
@@ -455,9 +455,10 @@ a:hover ul {
 
 .nav_nav a {
 	color:#fff;
+	text-decoration:none;
 }
 
-.nav_nav ul {
+.nav_nav li {
 	padding:0px 20px 0px 20px;
 	height:50px;
 	display:block;
@@ -468,12 +469,14 @@ a:hover ul {
 	cursor: pointer;
 }
 
-.nav_nav ul:hover {
-	color:#363636;
+.nav_nav li:hover {
 	background-color:#fff;
 	height:47px;
 	border-bottom:3px solid #007daa;
+	color:#363636;
 }
+
+
 
 
 
