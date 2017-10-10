@@ -40,59 +40,230 @@ include ('getbinginfo.php');
 	</div>
 	<div class="nav_main" id="nav_main">
 		<div class="content">
-			<div class="marks"><!--单个网址标签-->
+			<div class="marks"><!--网址标签卡start-->
 				<div class="marks_top_box">
 					<img class="marks_top_box_ico" src="style/img/favicon.ico">
-					<div class="marks_title_box">
-						<div class="marks_title">知乎</div>
+					<div class="marks_site_box">
+						<div class="marks_site">知乎</div>
 						<div class="marks_coll"><img class="marks_coll_ico" src="style/img/coll.png"><a href="#">编程学习</a></div>
 					</div>
-					<div class=""><a href="#"><img class="marks_edit_ico" src="style/img/edit.png"></a>
+					<div class="marks_edit"><a href="#"><img class="marks_edit_ico" src="style/img/edit.png"></a>
 					</div>
 				</div>
-			</div>
-			<div class="marks">
-				网址标签
-			</div>
-			<div class="marks">
-				网址标签
-			</div>
-			<div class="marks">
-				网址标签
-			</div>
-			<div class="marks">
-				网址标签
-			</div>
-			<div class="marks">
-				网址标签
-			</div>
-			<div class="marks">
-				网址标签
-			</div>
-			<div class="marks">
-				网址标签
-			</div>
-			<div class="marks">
-				网址标签
-			</div>
-			<div class="marks">
-				网址标签
-			</div>
-			<div class="marks">
-				网址标签
-			</div>
-			<div class="marks">
-				网址标签
-			</div>
-			<div class="marks">
-				网址标签
-			</div>
-			<div class="marks">
-				网址标签
-			</div>
-			<div class="marks">
-				网址标签
-			</div>
+				<div class="marks_bottom_box">
+					<div class="marks_title" title="在生活中有哪些让你觉得高端的东西就是好的瞬间？">在生活中有哪些让你觉得高端的东西就是好的瞬间？</div>
+					<div class="marks_url"><a href="#">https://www.zhihu.com/question/64676168/answer/241615734</a></div>
+					<div class="marks_enter"><a href="##">进入</a></div>
+				</div>
+			</div><!--网址标签卡end-->
+			<div class="marks"><!--网址标签卡start-->
+				<div class="marks_top_box">
+					<img class="marks_top_box_ico" src="style/img/favicon.ico">
+					<div class="marks_site_box">
+						<div class="marks_site">知乎</div>
+						<div class="marks_coll"><img class="marks_coll_ico" src="style/img/coll.png"><a href="#">编程学习</a></div>
+					</div>
+					<div class="marks_edit"><a href="#"><img class="marks_edit_ico" src="style/img/edit.png"></a>
+					</div>
+				</div>
+				<div class="marks_bottom_box">
+					<div class="marks_title" title="在生活中有哪些让你觉得高端的东西就是好的瞬间？">在生活中有哪些让你觉得高端的东西就是好的瞬间？</div>
+					<div class="marks_url"><a href="#">https://www.zhihu.com/question/64676168/answer/241615734</a></div>
+					<div class="marks_enter"><a href="##">进入</a></div>
+				</div>
+			</div><!--网址标签卡end-->
+			<div class="marks"><!--网址标签卡start-->
+				<div class="marks_top_box">
+					<img class="marks_top_box_ico" src="style/img/favicon.ico">
+					<div class="marks_site_box">
+						<div class="marks_site">知乎</div>
+						<div class="marks_coll"><img class="marks_coll_ico" src="style/img/coll.png"><a href="#">编程学习</a></div>
+					</div>
+					<div class="marks_edit"><a href="#"><img class="marks_edit_ico" src="style/img/edit.png"></a>
+					</div>
+				</div>
+				<div class="marks_bottom_box">
+					<div class="marks_title" title="在生活中有哪些让你觉得高端的东西就是好的瞬间？">在生活中有哪些让你觉得高端的东西就是好的瞬间？</div>
+					<div class="marks_url"><a href="#">https://www.zhihu.com/question/64676168/answer/241615734</a></div>
+					<div class="marks_enter"><a href="##">进入</a></div>
+				</div>
+			</div><!--网址标签卡end-->
+			<div class="marks"><!--网址标签卡start-->
+				<div class="marks_top_box">
+					<img class="marks_top_box_ico" src="style/img/favicon.ico">
+					<div class="marks_site_box">
+						<div class="marks_site">知乎</div>
+						<div class="marks_coll"><img class="marks_coll_ico" src="style/img/coll.png"><a href="#">编程学习</a></div>
+					</div>
+					<div class="marks_edit"><a href="#"><img class="marks_edit_ico" src="style/img/edit.png"></a>
+					</div>
+				</div>
+				<div class="marks_bottom_box">
+					<div class="marks_title" title="在生活中有哪些让你觉得高端的东西就是好的瞬间？">在生活中有哪些让你觉得高端的东西就是好的瞬间？</div>
+					<div class="marks_url"><a href="#">https://www.zhihu.com/question/64676168/answer/241615734</a></div>
+					<div class="marks_enter"><a href="##">进入</a></div>
+				</div>
+			</div><!--网址标签卡end-->
+			<div class="marks"><!--网址标签卡start-->
+				<div class="marks_top_box">
+					<img class="marks_top_box_ico" src="style/img/favicon.ico">
+					<div class="marks_site_box">
+						<div class="marks_site">知乎</div>
+						<div class="marks_coll"><img class="marks_coll_ico" src="style/img/coll.png"><a href="#">编程学习</a></div>
+					</div>
+					<div class="marks_edit"><a href="#"><img class="marks_edit_ico" src="style/img/edit.png"></a>
+					</div>
+				</div>
+				<div class="marks_bottom_box">
+					<div class="marks_title" title="在生活中有哪些让你觉得高端的东西就是好的瞬间？">在生活中有哪些让你觉得高端的东西就是好的瞬间？</div>
+					<div class="marks_url"><a href="#">https://www.zhihu.com/question/64676168/answer/241615734</a></div>
+					<div class="marks_enter"><a href="##">进入</a></div>
+				</div>
+			</div><!--网址标签卡end-->
+			<div class="marks"><!--网址标签卡start-->
+				<div class="marks_top_box">
+					<img class="marks_top_box_ico" src="style/img/favicon.ico">
+					<div class="marks_site_box">
+						<div class="marks_site">知乎</div>
+						<div class="marks_coll"><img class="marks_coll_ico" src="style/img/coll.png"><a href="#">编程学习</a></div>
+					</div>
+					<div class="marks_edit"><a href="#"><img class="marks_edit_ico" src="style/img/edit.png"></a>
+					</div>
+				</div>
+				<div class="marks_bottom_box">
+					<div class="marks_title" title="在生活中有哪些让你觉得高端的东西就是好的瞬间？">在生活中有哪些让你觉得高端的东西就是好的瞬间？</div>
+					<div class="marks_url"><a href="#">https://www.zhihu.com/question/64676168/answer/241615734</a></div>
+					<div class="marks_enter"><a href="##">进入</a></div>
+				</div>
+			</div><!--网址标签卡end-->
+			<div class="marks"><!--网址标签卡start-->
+				<div class="marks_top_box">
+					<img class="marks_top_box_ico" src="style/img/favicon.ico">
+					<div class="marks_site_box">
+						<div class="marks_site">知乎</div>
+						<div class="marks_coll"><img class="marks_coll_ico" src="style/img/coll.png"><a href="#">编程学习</a></div>
+					</div>
+					<div class="marks_edit"><a href="#"><img class="marks_edit_ico" src="style/img/edit.png"></a>
+					</div>
+				</div>
+				<div class="marks_bottom_box">
+					<div class="marks_title" title="在生活中有哪些让你觉得高端的东西就是好的瞬间？">在生活中有哪些让你觉得高端的东西就是好的瞬间？</div>
+					<div class="marks_url"><a href="#">https://www.zhihu.com/question/64676168/answer/241615734</a></div>
+					<div class="marks_enter"><a href="##">进入</a></div>
+				</div>
+			</div><!--网址标签卡end-->
+			<div class="marks"><!--网址标签卡start-->
+				<div class="marks_top_box">
+					<img class="marks_top_box_ico" src="style/img/favicon.ico">
+					<div class="marks_site_box">
+						<div class="marks_site">知乎</div>
+						<div class="marks_coll"><img class="marks_coll_ico" src="style/img/coll.png"><a href="#">编程学习</a></div>
+					</div>
+					<div class="marks_edit"><a href="#"><img class="marks_edit_ico" src="style/img/edit.png"></a>
+					</div>
+				</div>
+				<div class="marks_bottom_box">
+					<div class="marks_title" title="在生活中有哪些让你觉得高端的东西就是好的瞬间？">在生活中有哪些让你觉得高端的东西就是好的瞬间？</div>
+					<div class="marks_url"><a href="#">https://www.zhihu.com/question/64676168/answer/241615734</a></div>
+					<div class="marks_enter"><a href="##">进入</a></div>
+				</div>
+			</div><!--网址标签卡end-->
+			<div class="marks"><!--网址标签卡start-->
+				<div class="marks_top_box">
+					<img class="marks_top_box_ico" src="style/img/favicon.ico">
+					<div class="marks_site_box">
+						<div class="marks_site">知乎</div>
+						<div class="marks_coll"><img class="marks_coll_ico" src="style/img/coll.png"><a href="#">编程学习</a></div>
+					</div>
+					<div class="marks_edit"><a href="#"><img class="marks_edit_ico" src="style/img/edit.png"></a>
+					</div>
+				</div>
+				<div class="marks_bottom_box">
+					<div class="marks_title" title="在生活中有哪些让你觉得高端的东西就是好的瞬间？">在生活中有哪些让你觉得高端的东西就是好的瞬间？</div>
+					<div class="marks_url"><a href="#">https://www.zhihu.com/question/64676168/answer/241615734</a></div>
+					<div class="marks_enter"><a href="##">进入</a></div>
+				</div>
+			</div><!--网址标签卡end-->
+			<div class="marks"><!--网址标签卡start-->
+				<div class="marks_top_box">
+					<img class="marks_top_box_ico" src="style/img/favicon.ico">
+					<div class="marks_site_box">
+						<div class="marks_site">知乎</div>
+						<div class="marks_coll"><img class="marks_coll_ico" src="style/img/coll.png"><a href="#">编程学习</a></div>
+					</div>
+					<div class="marks_edit"><a href="#"><img class="marks_edit_ico" src="style/img/edit.png"></a>
+					</div>
+				</div>
+				<div class="marks_bottom_box">
+					<div class="marks_title" title="在生活中有哪些让你觉得高端的东西就是好的瞬间？">在生活中有哪些让你觉得高端的东西就是好的瞬间？</div>
+					<div class="marks_url"><a href="#">https://www.zhihu.com/question/64676168/answer/241615734</a></div>
+					<div class="marks_enter"><a href="##">进入</a></div>
+				</div>
+			</div><!--网址标签卡end-->
+			<div class="marks"><!--网址标签卡start-->
+				<div class="marks_top_box">
+					<img class="marks_top_box_ico" src="style/img/favicon.ico">
+					<div class="marks_site_box">
+						<div class="marks_site">知乎</div>
+						<div class="marks_coll"><img class="marks_coll_ico" src="style/img/coll.png"><a href="#">编程学习</a></div>
+					</div>
+					<div class="marks_edit"><a href="#"><img class="marks_edit_ico" src="style/img/edit.png"></a>
+					</div>
+				</div>
+				<div class="marks_bottom_box">
+					<div class="marks_title" title="在生活中有哪些让你觉得高端的东西就是好的瞬间？">在生活中有哪些让你觉得高端的东西就是好的瞬间？</div>
+					<div class="marks_url"><a href="#">https://www.zhihu.com/question/64676168/answer/241615734</a></div>
+					<div class="marks_enter"><a href="##">进入</a></div>
+				</div>
+			</div><!--网址标签卡end-->
+			<div class="marks"><!--网址标签卡start-->
+				<div class="marks_top_box">
+					<img class="marks_top_box_ico" src="style/img/favicon.ico">
+					<div class="marks_site_box">
+						<div class="marks_site">知乎</div>
+						<div class="marks_coll"><img class="marks_coll_ico" src="style/img/coll.png"><a href="#">编程学习</a></div>
+					</div>
+					<div class="marks_edit"><a href="#"><img class="marks_edit_ico" src="style/img/edit.png"></a>
+					</div>
+				</div>
+				<div class="marks_bottom_box">
+					<div class="marks_title" title="在生活中有哪些让你觉得高端的东西就是好的瞬间？">在生活中有哪些让你觉得高端的东西就是好的瞬间？</div>
+					<div class="marks_url"><a href="#">https://www.zhihu.com/question/64676168/answer/241615734</a></div>
+					<div class="marks_enter"><a href="##">进入</a></div>
+				</div>
+			</div><!--网址标签卡end-->
+			<div class="marks"><!--网址标签卡start-->
+				<div class="marks_top_box">
+					<img class="marks_top_box_ico" src="style/img/favicon.ico">
+					<div class="marks_site_box">
+						<div class="marks_site">知乎</div>
+						<div class="marks_coll"><img class="marks_coll_ico" src="style/img/coll.png"><a href="#">编程学习</a></div>
+					</div>
+					<div class="marks_edit"><a href="#"><img class="marks_edit_ico" src="style/img/edit.png"></a>
+					</div>
+				</div>
+				<div class="marks_bottom_box">
+					<div class="marks_title" title="在生活中有哪些让你觉得高端的东西就是好的瞬间？">在生活中有哪些让你觉得高端的东西就是好的瞬间？</div>
+					<div class="marks_url"><a href="#">https://www.zhihu.com/question/64676168/answer/241615734</a></div>
+					<div class="marks_enter"><a href="##">进入</a></div>
+				</div>
+			</div><!--网址标签卡end-->
+			<div class="marks"><!--网址标签卡start-->
+				<div class="marks_top_box">
+					<img class="marks_top_box_ico" src="style/img/favicon.ico">
+					<div class="marks_site_box">
+						<div class="marks_site">知乎</div>
+						<div class="marks_coll"><img class="marks_coll_ico" src="style/img/coll.png"><a href="#">编程学习</a></div>
+					</div>
+					<div class="marks_edit"><a href="#"><img class="marks_edit_ico" src="style/img/edit.png"></a>
+					</div>
+				</div>
+				<div class="marks_bottom_box">
+					<div class="marks_title" title="在生活中有哪些让你觉得高端的东西就是好的瞬间？">在生活中有哪些让你觉得高端的东西就是好的瞬间？</div>
+					<div class="marks_url"><a href="#">https://www.zhihu.com/question/64676168/answer/241615734</a></div>
+					<div class="marks_enter"><a href="##">进入</a></div>
+				</div>
+			</div><!--网址标签卡end-->
 			a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>
 			a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>
 			a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>

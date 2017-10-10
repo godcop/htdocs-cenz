@@ -1,4 +1,4 @@
-html {
+﻿html {
 	height: 100%;
 	margin: 0;
 	padding: 0;
@@ -477,42 +477,106 @@ a:hover ul {
 }
 
 .marks_top_box {
-	height:56px;
+	height:46px;
 	border-bottom:1px solid #cfcfcf;
+	padding-bottom:10px;
 }
 
 .marks_top_box_ico {
 	height:46px;
 	width:46px;
-	margin-bottom:10px;
+	/*margin-bottom:10px;*/
 	float:left;
 }
 
-.marks_title_box {
+.marks_site_box {
 	height:46px;
+	width:172px;
 	margin:0px 0px 0px 10px;
 	float:left;
 }
 
-.marks_title {
-	color:#333;
+.marks_site {
+	width:172px;
+	height:24px;
 	font-size:16px;
-	line-height:16px;
+	line-height:24px;
+	/*padding-left:16px;*/
+	overflow:hidden;
+
+}
+
+.marks_coll {
+	width:172px;
+	height:20px;
+	line-height:20px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+.marks_coll_ico {
+	height:16px;
+	width:16px;
+	vertical-align: middle;
 }
 
 .marks_coll a {
-	color:#333;
+	color:#888;
+	font-size:13px;
 	text-decoration:none;
+	vertical-align: middle;
 }
 
+.marks_edit {
+	height:46px;
+	width:30px;
+	float:right;
+}
 
+.marks_edit_ico {
+	height:30px;
+	width:30px;
+	margin:8px 0px 8px 0px;
+	vertical-align: middle;
+}
 
+.marks_bottom_box {
+	height:60px;
+	width:258px;
+	margin-top:4px;
+}
 
+.marks_title {
+	font-size:14px;
+	width:258px;
+	height:44px;
+	color:#333;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
 
+.marks_url, .marks_url a{
+	font-size:13px;
+	width:180px;
+	height:28px;
+	color:#888;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	text-decoration:none;
+	float:left;
+}
 
+.marks_enter {
+	float:right;
+}
 
-
-
+.marks_enter a {
+	height:28px;
+	font-size:13px;
+	color:#888;
+	text-decoration:none;
+	float:right;
+}
 
 
 
