@@ -340,7 +340,7 @@ include ('getbinginfo.php');
 </div>
 
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="style/main.js"></script>
+<script src="style/main_own.js"></script>
 <script type="text/javascript" >
 //0日前必应图片信息
 var jsbinginfo0=new Array()
