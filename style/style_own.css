@@ -426,7 +426,7 @@ a:hover ul {
 	height:50px;
 	background-color:#363636;
 	border-bottom:2px solid #e3e3e3;
-	display:block;
+	/*position:fixed;*/
 }
 
 .nav_nav {
@@ -438,19 +438,6 @@ a:hover ul {
 
 .content {
 	margin:15px 0px 0px 0px;
-}
-
-.marks {
-	width:278px;
-	height:145px;
-	margin:0px 8px 16px 8px;
-	border:1px solid #e3e3e3;
-	overflow:hidden;
-	border-radius:5px;
-	/*background:rgba(255,255,255,0.5);*/
-	background-color:#efefef;
-	float:left;
-	
 }
 
 .nav_nav a {
@@ -475,6 +462,70 @@ a:hover ul {
 	border-bottom:3px solid #007daa;
 	color:#363636;
 }
+
+.marks {
+	width:258px;
+	height:125px;
+	margin:0px 8px 16px 8px;
+	border:1px solid #e3e3e3;
+	overflow:hidden;
+	border-radius:5px;
+	/*background:rgba(255,255,255,0.5);*/
+	background-color:#efefef;
+	float:left;
+	padding:10px 10px 10px 10px;
+}
+
+.marks_top_box {
+	height:56px;
+	border-bottom:1px solid #cfcfcf;
+}
+
+.marks_top_box_ico {
+	height:46px;
+	width:46px;
+	margin-bottom:10px;
+	float:left;
+}
+
+.marks_title_box {
+	height:46px;
+	margin:0px 0px 0px 10px;
+	float:left;
+}
+
+.marks_title {
+	color:#333;
+	font-size:16px;
+	line-height:16px;
+}
+
+.marks_coll a {
+	color:#333;
+	text-decoration:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -40,8 +40,16 @@ include ('getbinginfo.php');
 	</div>
 	<div class="nav_main" id="nav_main">
 		<div class="content">
-			<div class="marks">
-				网址标签
+			<div class="marks"><!--单个网址标签-->
+				<div class="marks_top_box">
+					<img class="marks_top_box_ico" src="style/img/favicon.ico">
+					<div class="marks_title_box">
+						<div class="marks_title">知乎</div>
+						<div class="marks_coll"><img class="marks_coll_ico" src="style/img/coll.png"><a href="#">编程学习</a></div>
+					</div>
+					<div class=""><a href="#"><img class="marks_edit_ico" src="style/img/edit.png"></a>
+					</div>
+				</div>
 			</div>
 			<div class="marks">
 				网址标签

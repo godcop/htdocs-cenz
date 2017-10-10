@@ -168,14 +168,3 @@ function fb_button(a){
     });
 	
 	
-	
-window.onscroll=function(){
-var topScroll =document.$('nav_full').scrollTop;//滚动的距离,距离顶部的距离
-var bignav = document.getElementById("nav_nav_bg");//获取到导航栏id
-if(topScroll > 50){ //当滚动距离大于50px时执行下面的东西
-	bignav.style.position = 'fixed';
-}else{//当滚动距离小于50的时候执行下面的内容，也就是让导航栏恢复原状
-	bignav.style.position = 'static';
-	}
-}	
-	
