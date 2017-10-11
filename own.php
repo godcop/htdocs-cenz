@@ -22,7 +22,29 @@ include ('getbinginfo.php');
 <body>
 
 <div class="navs" id="navs">
-	
+	<div class="setup_wrap">
+		<div class="setup_title_h1">首页设置</div>
+		<div class="setup_title_h2">简单设置即可让你的视界更性感</div>
+		<form action="http://www.baidu.com/baidu" class="setup_subbox" id="setup_subbox">
+			<input class="setup_input" type="text" name="index_title_h1" value="首页标题"/>
+			<input class="setup_input" type="text" name="index_title_h2" value="每日一语"/>
+			<input class="setup_input" type="text" name="index_bgurl" value="自定义背景URL"/>
+			<input class="setup_input" type="text" name="index_link" value="自定义顶部链接"/>
+			<div class="setup_search_title">默认搜索引擎</div>
+			<div class="setup_search_box">
+				<div><input class="setup_search" type="radio" name="baidu" value="baidu" checked="checked">百度 baidu.com</div>
+				<div><input class="setup_search" type="radio" name="google" value="google">谷歌 google.com</div>
+				<div><input class="setup_search" type="radio" name="bing" value="bing">必应 bing.com</div>
+				<div><input class="setup_search" type="radio" name="duck" value="duck">鸭子 duckduckgo.com</div>
+			</div>
+			<input class="setup_submit" type="submit" value="确认提交">
+		</form>
+		<div class="setup_bottom">
+			<img class="setup_bottom_img" src="style/img/favicon.png">
+			<div class="setup_bottom_h1">橙子</div>
+			<div class="setup_bottom_h2">永远相信明天会更美好!</div>
+		</div>
+	</div>
 </div>
 
 <div class="nav_full_bg">
