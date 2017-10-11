@@ -22,7 +22,7 @@ include ('getbinginfo.php');
 <body>
 
 <div class="navs" id="navs">
-	右侧设置菜单
+	
 </div>
 
 <div class="nav_full_bg">
