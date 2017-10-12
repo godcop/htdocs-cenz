@@ -11,7 +11,7 @@ include 'getbinginfo.php';
 	<meta name="keywords" content="CENZ 2.0beta1"/>
 	<title>橙子 - 精彩每一天！</title>
 	<link rel="shortcut icon" href="favicon.ico">
-	<link href="style/style_a.css" rel="stylesheet" media="screen"/>
+	<link href="style/style.css" rel="stylesheet" media="screen"/>
 	<script type="text/javascript">
 		var p_smallPic = '',p_smallUrl = '',p_bgPics = [],p_bgPic = [];
 		function $$(id){
@@ -23,37 +23,48 @@ include 'getbinginfo.php';
 
 <div class="navs" id="navs">
 	<div class="setup_wrap">
-		<div class="setup_title_h1">首页设置</div>
-		<div class="setup_title_h2">简单设置即可让你的视界更性感</div>
-		<form action="http://www.baidu.com/baidu" class="setup_subbox" id="setup_subbox">
-			<input class="setup_input" type="text" name="index_title_h1" value="首页标题"/>
-			<input class="setup_input" type="text" name="index_title_h2" value="每日一语"/>
-			<input class="setup_input" type="text" name="index_bgurl" value="自定义背景URL"/>
-			<input class="setup_input" type="text" name="index_link" value="自定义顶部链接"/>
-			<div class="setup_search_title">默认搜索引擎</div>
-			<div class="setup_search_box">
-				<div><input class="setup_search" type="radio" name="baidu" value="baidu" checked="checked">百度 baidu.com</div>
-				<div><input class="setup_search" type="radio" name="google" value="google">谷歌 google.com</div>
-				<div><input class="setup_search" type="radio" name="bing" value="bing">必应 bing.com</div>
-				<div><input class="setup_search" type="radio" name="duck" value="duck">鸭子 duckduckgo.com</div>
-			</div>
-			<input class="setup_submit" type="submit" value="确认提交">
-		</form>
+		<!--登录框-->
+		<div class="login_wrap" id="login_wrap">
+			<div class="login_wrap_t">欢迎登录</div>
+			<form action="#" class="login_box" id="login_box">
+				<input class="login_box_a" type="text" name="login_email" value="登录邮箱"/>
+				<input class="login_box_a" type="text" name="login_password" value="密码"/>
+				<input class="login_box_submit" type="submit" value="现在登录">
+			</form>
+			<div class="go_signup" id="go_signup" onclick="switchsignbox()">前往注册</div>
+		</div>
+		
+		<!--注册框-->
+		<div class="signup_wrap" id="signup_wrap">
+			<div class="login_wrap_t">欢迎注册</div>
+			<form action="#" class="signup_box" id="signup_box">
+				<input class="login_box_a" type="text" name="signup_email" value="登录邮箱"/>
+				<input class="login_box_a" type="text" name="signup_user" value="用户名"/>
+				<input class="login_box_a" type="text" name="signup_password1" value="密码"/>
+				<input class="login_box_a" type="text" name="signup_password2" value="确认密码"/>
+				<input class="login_box_submit" type="submit" value="立即注册">
+			</form>
+			<div class="go_login" id="go_login" onclick="switchloginbox()">返回登录</div>
+		</div>
+		
 		<div class="setup_bottom">
-			<img class="setup_bottom_img" src="style/img/favicon.png">
-			<div class="setup_bottom_h1">橙子</div>
-			<div class="setup_bottom_h2">永远相信明天会更美好!</div>
+			<img class="setup_bottom_img" src="style/img/logo.png">
+			<div class="setup_bottom_h">
+				<div class="setup_bottom_h1">橙子</div>
+				<div class="setup_bottom_h2">2.0 beta2</div>
+			</div>
+			<div class="setup_bottom_h3">永远相信明天会更美好!</div>
 		</div>
 	</div>
 </div>
 
-<div class="nav_full_bg">
-	<img id="nav_full_img" height="100%" width="100%"/>
+<div class="nav_full_index_bg">
+	<img id="nav_full_index_img" height="100%" width="100%"/>
 </div>
 
-<div class="nav_full" id="nav_full">
+<div class="nav_full_index" id="nav_full_index">
 	<div class="readme">
-		<div><a class="nav_full_h1">常用网址 Site Navigation</a></div>
+		<div><a class="nav_full_index_h1">常用网址 Site Navigation</a></div>
 		<div class="lrtk">
 		  <a href="http://pan.baidu.com/" class="box01" target="_blank" title="百度网盘"></a>
 		  <a href="http://www.virscan.org/" class="box02" target="_blank" title="免费的多引擎在线文件病毒扫描"></a>
@@ -213,7 +224,7 @@ document.getElementById("info_title_b").innerHTML=jsbinginfo[2];
 document.getElementById("info_title_c").innerHTML=jsbinginfo[3] + "&ensp;|&ensp;" + jsbinginfo[4];
 document.getElementById("info_story").innerHTML=jsbinginfo[5];
 document.getElementById("downloadimg").href=jsbinginfo[0];
-document.getElementById("nav_full_img").src=jsbinginfo[0];
+document.getElementById("nav_full_index_img").src=jsbinginfo[0];
 
     //第一段js
     var styleList = [];

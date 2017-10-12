@@ -11,7 +11,7 @@ include ('getbinginfo.php');
 	<meta name="keywords" content="CENZ 2.0beta1"/>
 	<title>橙子 - 精彩每一天！</title>
 	<link rel="shortcut icon" href="favicon.ico">
-	<link href="style/style_own.css" rel="stylesheet" media="screen"/>
+	<link href="style/style.css" rel="stylesheet" media="screen"/>
 	<script type="text/javascript">
 		var p_smallPic = '',p_smallUrl = '',p_bgPics = [],p_bgPic = [];
 		function $$(id){
@@ -23,6 +23,11 @@ include ('getbinginfo.php');
 
 <div class="navs" id="navs">
 	<div class="setup_wrap">
+		<div class="setup_avatar">
+			<img class="setup_avatar_img" src="style/img/avatar.gif">
+			<div class="setup_avatar_t">Cenz，欢迎你！</div>
+			<div class="setup_avatar_out"><a href="#">退出</a></div>
+		</div>
 		<div class="setup_title_h1">首页设置</div>
 		<div class="setup_title_h2">简单设置即可让你的视界更性感</div>
 		<form action="http://www.baidu.com/baidu" class="setup_subbox" id="setup_subbox">
@@ -32,17 +37,20 @@ include ('getbinginfo.php');
 			<input class="setup_input" type="text" name="index_link" value="自定义顶部链接"/>
 			<div class="setup_search_title">默认搜索引擎</div>
 			<div class="setup_search_box">
-				<div><input class="setup_search" type="radio" name="baidu" value="baidu" checked="checked">百度 baidu.com</div>
-				<div><input class="setup_search" type="radio" name="google" value="google">谷歌 google.com</div>
-				<div><input class="setup_search" type="radio" name="bing" value="bing">必应 bing.com</div>
-				<div><input class="setup_search" type="radio" name="duck" value="duck">鸭子 duckduckgo.com</div>
+				<div><input class="setup_search" id="radio-1" type="radio" name="setup_s" value="baidu" checked="checked"><label for="radio-1"></label> 百度 Baidu.com</div>
+				<div><input class="setup_search" id="radio-2" type="radio" name="setup_s" value="google"><label for="radio-2"></label> 谷歌 Google.com</div>
+				<div><input class="setup_search" id="radio-3" type="radio" name="setup_s" value="bing"><label for="radio-3"></label> 必应 Bing.com</div>
+				<div><input class="setup_search" id="radio-4" type="radio" name="setup_s" value="duck"><label for="radio-4"></label> 鸭子 Duckduckgo.com</div>
 			</div>
 			<input class="setup_submit" type="submit" value="确认提交">
 		</form>
 		<div class="setup_bottom">
-			<img class="setup_bottom_img" src="style/img/favicon.png">
-			<div class="setup_bottom_h1">橙子</div>
-			<div class="setup_bottom_h2">永远相信明天会更美好!</div>
+			<img class="setup_bottom_img" src="style/img/logo.png">
+			<div class="setup_bottom_h">
+				<div class="setup_bottom_h1">橙子</div>
+				<div class="setup_bottom_h2">2.0 beta2</div>
+			</div>
+			<div class="setup_bottom_h3">永远相信明天会更美好!</div>
 		</div>
 	</div>
 </div>
@@ -362,7 +370,7 @@ include ('getbinginfo.php');
 </div>
 
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="style/main_own.js"></script>
+<script src="style/main_my.js"></script>
 <script type="text/javascript" >
 //0日前必应图片信息
 var jsbinginfo0=new Array()

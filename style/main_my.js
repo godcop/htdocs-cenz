@@ -123,7 +123,7 @@ function fb_button(a){
     var flag = 0;
     jQuery('.li_right_menu').click(function() {
         if(flag == 0) {
-            $('.lay_wrap,.lay_foot,.dicen').animate({width: '75%'},350);
+            $('.lay_wrap,.lay_foot,.dicen').animate({width: '79%'},350);
             $('.navs').animate({width:'toggle'},350);
             flag = 1;
         } else {

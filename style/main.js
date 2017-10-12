@@ -42,7 +42,7 @@ function fb_button(a){
 		document.getElementById("info_title_c").innerHTML=jsbinginfo[3] + "&ensp;|&ensp;" + jsbinginfo[4];
 		document.getElementById("info_story").innerHTML=jsbinginfo[5];
 		document.getElementById("downloadimg").href=jsbinginfo[0];
-		document.getElementById("nav_full_img").src=jsbinginfo[0];
+		document.getElementById("nav_full_index_img").src=jsbinginfo[0];
 
     //第一段js
     var styleList = [];
@@ -123,7 +123,7 @@ function fb_button(a){
     var flag = 0;
     jQuery('.li_right_menu').click(function() {
         if(flag == 0) {
-            $('.lay_wrap,.lay_foot,.dicen').animate({width: '75%'},350);
+            $('.lay_wrap,.lay_foot,.dicen').animate({width: '79%'},350);
             $('.navs').animate({width:'toggle'},350);
             flag = 1;
         } else {
@@ -144,7 +144,7 @@ function fb_button(a){
 	//左侧菜单滑出js
         $(document).ready(function(){
         $('.nav_left').click(function(){
-            $('.nav_full,.nav_full_bg').animate({width:'toggle'},350);
+            $('.nav_full_index,.nav_full_index_bg').animate({width:'toggle'},350);
         });
     });
 	
@@ -167,4 +167,23 @@ function fb_button(a){
         }
     });
 	
-	
+//切换首页右侧弹出窗口登录注册框
+//切换为注册框
+function switchsignbox()
+{
+document.getElementById('signup_wrap').style.display='block';
+document.getElementById('login_wrap').style.display='none';
+}
+
+//切换为登录框
+function switchloginbox()
+{
+document.getElementById('login_wrap').style.display='block';
+document.getElementById('signup_wrap').style.display='none';
+}
+
+
+
+
+
+
