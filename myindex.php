@@ -30,17 +30,17 @@ include ('getbinginfo.php');
 		</div>
 		<div class="setup_title_h1">首页设置</div>
 		<div class="setup_title_h2">简单设置即可让你的视界更性感</div>
-		<form action="http://www.baidu.com/baidu" class="setup_subbox" id="setup_subbox">
-			<input class="setup_input" type="text" name="index_title_h1" value="首页标题"/>
-			<input class="setup_input" type="text" name="index_title_h2" value="每日一语"/>
-			<input class="setup_input" type="text" name="index_bgurl" value="自定义背景URL"/>
-			<input class="setup_input" type="text" name="index_link" value="自定义顶部链接"/>
+		<form action="#" class="setup_subbox" id="setup_subbox">
+			<input class="setup_input" type="text" name="title1" value="" placeholder="首页标题：少于10个字符"/>
+			<input class="setup_input" type="text" name="title2" value="" placeholder="每日一语：少于25个字符"/>
+			<input class="setup_input" type="text" name="bgurl" value="" placeholder="自定义背景：http://xx.com/x.jpg"/>
+			<input class="setup_input" type="text" name="link" value=""  placeholder="顶部链接：橙子，http://cenz.cn"/>
 			<div class="setup_search_title">默认搜索引擎</div>
 			<div class="setup_search_box">
-				<div><input class="setup_search" id="radio-1" type="radio" name="setup_s" value="baidu" checked="checked"><label for="radio-1"></label> 百度 Baidu.com</div>
-				<div><input class="setup_search" id="radio-2" type="radio" name="setup_s" value="google"><label for="radio-2"></label> 谷歌 Google.com</div>
-				<div><input class="setup_search" id="radio-3" type="radio" name="setup_s" value="bing"><label for="radio-3"></label> 必应 Bing.com</div>
-				<div><input class="setup_search" id="radio-4" type="radio" name="setup_s" value="duck"><label for="radio-4"></label> 鸭子 Duckduckgo.com</div>
+				<div><input class="setup_search" id="radio-1" type="radio" name="search" value="baidu" checked="checked"><label for="radio-1"></label> 百度 Baidu.com</div>
+				<div><input class="setup_search" id="radio-2" type="radio" name="search" value="google"><label for="radio-2"></label> 谷歌 Google.com</div>
+				<div><input class="setup_search" id="radio-3" type="radio" name="search" value="bing"><label for="radio-3"></label> 必应 Bing.com</div>
+				<div><input class="setup_search" id="radio-4" type="radio" name="search" value="duck"><label for="radio-4"></label> 鸭子 Duckduckgo.com</div>
 			</div>
 			<input class="setup_submit" type="submit" value="确认提交">
 		</form>

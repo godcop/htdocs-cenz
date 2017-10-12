@@ -27,8 +27,8 @@ include 'getbinginfo.php';
 		<div class="login_wrap" id="login_wrap">
 			<div class="login_wrap_t">欢迎登录</div>
 			<form action="#" class="login_box" id="login_box">
-				<input class="login_box_a" type="text" name="login_email" value="登录邮箱"/>
-				<input class="login_box_a" type="text" name="login_password" value="密码"/>
+				<input class="login_box_a" type="text" name="email" value="" placeholder="登录邮箱"/>
+				<input class="login_box_a" type="text" name="password" value="" placeholder="密码"/>
 				<input class="login_box_submit" type="submit" value="现在登录">
 			</form>
 			<div class="go_signup" id="go_signup" onclick="switchsignbox()">前往注册</div>
@@ -38,10 +38,10 @@ include 'getbinginfo.php';
 		<div class="signup_wrap" id="signup_wrap">
 			<div class="login_wrap_t">欢迎注册</div>
 			<form action="#" class="signup_box" id="signup_box">
-				<input class="login_box_a" type="text" name="signup_email" value="登录邮箱"/>
-				<input class="login_box_a" type="text" name="signup_user" value="用户名"/>
-				<input class="login_box_a" type="text" name="signup_password1" value="密码"/>
-				<input class="login_box_a" type="text" name="signup_password2" value="确认密码"/>
+				<input class="login_box_a" type="text" name="email" value="" placeholder="登录邮箱"/>
+				<input class="login_box_a" type="text" name="user" value="" placeholder="用户名：少于16个字符"/>
+				<input class="login_box_a" type="text" name="password1" value="" placeholder="密码：输入6-16个字符"/>
+				<input class="login_box_a" type="text" name="password2" value="" placeholder="确认密码：输入6-16个字符"/>
 				<input class="login_box_submit" type="submit" value="立即注册">
 			</form>
 			<div class="go_login" id="go_login" onclick="switchloginbox()">返回登录</div>
