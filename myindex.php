@@ -1,30 +1,5 @@
 <?php
 include ('getbinginfo.php');
-
-    require_once('bookmark/bookmark_fns.php');
-    session_start();
-    
-    //创建变量
-    $username = @$_POST['username'];
-    $passwd = @$_POST['passwd'];
-    
-    if($username && $passwd)
-    {
-        try
-        {
-            login($username,$passwd);
-            //如果该用户在数据库中，则注册会话变量
-            $_SESSION['valid_user'] = $username;
-        }
-        catch(exception $e)
-        {
-            //登录不成功
-
-            exit;
-        }
-    }
-    
-
 ?>
 <!doctype html>
 <html>
@@ -50,7 +25,7 @@ include ('getbinginfo.php');
 	<div class="setup_wrap">
 		<div class="setup_avatar">
 			<img class="setup_avatar_img" src="style/img/avatar.gif">
-			<div class="setup_avatar_t"><?php check_valid_user();?>Cenz，欢迎你！</div>
+			<div class="setup_avatar_t">Cenz，欢迎你！</div>
 			<div class="setup_avatar_out"><a href="#">退出</a></div>
 		</div>
 		<div class="setup_title_h1">首页设置</div>
