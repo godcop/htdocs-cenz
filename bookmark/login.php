@@ -4,7 +4,7 @@
  */
     error_reporting(E_ALL &~ E_NOTICE);     //屏蔽错误信息
     include 'conn.php';     //调用数据库连接文件
-
+	
     $username=$_POST['username'];
     $password=$_POST['password'];     //接收前台post值
 
@@ -21,7 +21,9 @@
         {                                                //查询是否有此用户
             if ($selrow->password == $password)              //判断密码是否正确
             {
-                echo "<script>alert('登录成功');location.href='../myindex.php';</script>";
+				Session_start();       //使用SESSION前必须调用该函数。
+				$_SESSION['username']=$username;   //注册一个SESSION变量
+				header("Location:../home.php");
             }
             else
             {
@@ -34,5 +36,12 @@
         }
     }
 
-    
+session_start();
+
+//注销登录
+if($_GET['action'] == "logout"){
+    unset($_SESSION['username']);
+    header("Location:../");
+    exit;
+}
 ?>

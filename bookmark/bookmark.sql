@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-10-13 15:13:08
--- 服务器版本： 10.1.13-MariaDB
--- PHP Version: 5.6.20
+-- Generation Time: 2017-10-14 07:32:45
+-- 服务器版本： 10.1.26-MariaDB
+-- PHP Version: 7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -27,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `user` (
-  `id` int(11) NOT NULL,
+  `uid` int(11) NOT NULL,
   `username` varchar(30) DEFAULT NULL,
   `password` varchar(30) DEFAULT NULL,
   `email` varchar(30) DEFAULT NULL
@@ -41,7 +43,7 @@ CREATE TABLE `user` (
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD UNIQUE KEY `id` (`id`);
+  ADD UNIQUE KEY `id` (`uid`);
 
 --
 -- 在导出的表使用AUTO_INCREMENT
@@ -51,7 +53,9 @@ ALTER TABLE `user`
 -- 使用表AUTO_INCREMENT `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

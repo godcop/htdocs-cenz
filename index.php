@@ -1,5 +1,10 @@
 <?php
 include 'getbinginfo.php';
+
+session_start();
+if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
+    header("Location:home.php");
+}
 ?>
 <!doctype html>
 <html>
@@ -29,7 +34,7 @@ include 'getbinginfo.php';
 			<form class="login_box" action="bookmark/login.php" method="post" id="login_box">
 				<input class="login_box_a" type="text" name="username" value="" placeholder="用户名"/>
 				<input class="login_box_a" type="password" name="password" value="" placeholder="密码"/>
-				<input class="login_box_submit" type="submit" value="现在登录">
+				<input class="login_box_submit" type="submit" name="submit" value="现在登录">
 			</form>
 			<div class="go_signup" id="go_signup" onclick="switchsignbox()">前往注册</div>
 		</div>

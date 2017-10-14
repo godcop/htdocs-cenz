@@ -1,5 +1,11 @@
 <?php
 include ('getbinginfo.php');
+session_start();
+if(!isset($_SESSION['username'])){
+    header("Location:/");
+    exit();
+}
+$username=$_SESSION['username']
 ?>
 <!doctype html>
 <html>
@@ -25,8 +31,8 @@ include ('getbinginfo.php');
 	<div class="setup_wrap">
 		<div class="setup_avatar">
 			<img class="setup_avatar_img" src="style/img/avatar.gif">
-			<div class="setup_avatar_t">Cenz，欢迎你！</div>
-			<div class="setup_avatar_out"><a href="#">退出</a></div>
+			<div class="setup_avatar_t"><?php echo $username ?>，欢迎你！</div>
+			<div class="setup_avatar_out"><a href="bookmark/login.php?action=logout">退出</a></div>
 		</div>
 		<div class="setup_title_h1">首页设置</div>
 		<div class="setup_title_h2">简单设置即可让你的视界更性感</div>
