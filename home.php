@@ -1,11 +1,5 @@
 <?php
-include ('getbinginfo.php');
-session_start();
-if(!isset($_SESSION['username'])){
-    header("Location:/");
-    exit();
-}
-$username=$_SESSION['username']
+include ('bookmark/home_getbinginfo.php');
 ?>
 <!doctype html>
 <html>
@@ -36,11 +30,11 @@ $username=$_SESSION['username']
 		</div>
 		<div class="setup_title_h1">首页设置</div>
 		<div class="setup_title_h2">简单设置即可让你的视界更性感</div>
-		<form action="#" class="setup_subbox" id="setup_subbox">
+		<form action="bookmark/setup.php" class="setup_subbox" method="post" id="setup_subbox">
 			<input class="setup_input" type="text" name="title1" value="" placeholder="首页标题：少于10个字符"/>
 			<input class="setup_input" type="text" name="title2" value="" placeholder="每日一语：少于25个字符"/>
-			<input class="setup_input" type="text" name="bgurl" value="" placeholder="自定义背景：http://xx.com/x.jpg"/>
-			<input class="setup_input" type="text" name="link" value=""  placeholder="顶部链接：橙子，http://cenz.cn"/>
+			<input class="setup_input" type="text" name="bgurl" value="" placeholder="自定义背景：http://x.com/x.jpg"/>
+			<input class="setup_input" type="text" name="links" value=""  placeholder="顶部链接：橙子，http://cenz.cn;"/>
 			<div class="setup_search_title">默认搜索引擎</div>
 			<div class="setup_search_box">
 				<div><input class="setup_search" id="radio-1" type="radio" name="search" value="baidu" checked="checked"><label for="radio-1"></label> 百度 Baidu.com</div>
@@ -336,10 +330,10 @@ $username=$_SESSION['username']
 	<div class="middle_box">
 		<div class="text_box">
 			<div class="text_h1">
-				<a>Daily Sentence</a>
+				<a><?php echo $title1;?></a>
 			</div>
 			<div class="text_h2">
-				<a>所谓成功，只有两个标准，小时候的分数，大了后的存款。</a>
+				<a><?php echo $title2;?></a>
 			</div>
 		</div>
 		<form action="http://www.baidu.com/baidu" class="search" id="sb_form" target="_blank">
@@ -376,8 +370,27 @@ $username=$_SESSION['username']
 </div>
 
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="style/main_my.js"></script>
+<script src="style/main_home.js"></script>
 <script type="text/javascript" >
+
+//用户自定义的背景图片信息
+var jsbinginfoa=new Array()
+jsbinginfoa[0]="<?php echo $custom_bg ?>"
+jsbinginfoa[1]='<img src="<?php echo $custom_bg ?>" width="380px" />'
+jsbinginfoa[2]="自定义背景图片"
+jsbinginfoa[3]="自定义"
+jsbinginfoa[4]="<?php echo $username ?>"
+jsbinginfoa[5]="这是【<?php echo $username ?>】自定义的背景图片</br>Tips:</br>1.如果没有背景图片显示，请检查背景图片URL是否输入正确。</br>2.左右切换图片后，如要返回自定义背景图片，请刷新本页面！"
+
+//0日前必应图片信息
+var jsbinginfo0=new Array()
+jsbinginfo0[0]="<?php echo $imgurl0 ?>"
+jsbinginfo0[1]='<img src="<?php echo $imgurl0 ?>" width="380px" />'
+jsbinginfo0[2]="<?php echo $imgtitle0 ?>"
+jsbinginfo0[3]="<?php echo $imgaddress0 ?>"
+jsbinginfo0[4]="<?php echo $imgauthor0 ?>"
+jsbinginfo0[5]="<?php echo $story0 ?>"
+
 //0日前必应图片信息
 var jsbinginfo0=new Array()
 jsbinginfo0[0]="<?php echo $imgurl0 ?>"
@@ -444,7 +457,12 @@ jsbinginfo7[4]="<?php echo $imgauthor7 ?>"
 jsbinginfo7[5]="没有往日美图故事"
 
 //默认美图信息日期指定
-var jsbinginfo = jsbinginfo0;
+var jsbinginfo;
+if(jsbinginfoa!=""){
+	jsbinginfo = jsbinginfoa;
+}else{
+	jsbinginfo = jsbinginfo0;
+}
 var bingflag = 0;
 
 //向指定id输出html代码
