@@ -336,11 +336,8 @@ include ('bookmark/home_getbinginfo.php');
 				<a><?php echo $title2;?></a>
 			</div>
 		</div>
-		<form action="http://www.baidu.com/baidu" class="search" id="sb_form" target="_blank">
-			<input name="tn" type="hidden" value="SE_zzsearchcode_shhzc78w"><!--百度站长信息-->
-			<input class="sw_qbox" id="inputs" name="wd" title="输入搜索词" type="text" autocomplete="off" baidusug="1"/>
-			<input class="sw_qbtn" id="sb_form_go" name="go" tabindex="0" title="百度一下" type="submit" value=""/>
-		</form>
+		<!--根据选择输出搜索框代码-->
+		<?php echo $search;?>
 	</div>
 	<div class="getbing">
 		<div class="lay_foot">
@@ -375,12 +372,12 @@ include ('bookmark/home_getbinginfo.php');
 
 //用户自定义的背景图片信息
 var jsbinginfoa=new Array()
-jsbinginfoa[0]="<?php echo $custom_bg ?>"
-jsbinginfoa[1]='<img src="<?php echo $custom_bg ?>" width="380px" />'
-jsbinginfoa[2]="自定义背景图片"
-jsbinginfoa[3]="自定义"
-jsbinginfoa[4]="<?php echo $username ?>"
-jsbinginfoa[5]="这是【<?php echo $username ?>】自定义的背景图片</br>Tips:</br>1.如果没有背景图片显示，请检查背景图片URL是否输入正确。</br>2.左右切换图片后，如要返回自定义背景图片，请刷新本页面！"
+jsbinginfoa[0]="<?php echo $imgurla ?>"
+jsbinginfoa[1]='<img src="<?php echo $imgurla ?>" width="380px" />'
+jsbinginfoa[2]="<?php echo $imgtitlea ?>"
+jsbinginfoa[3]="<?php echo $imgaddressa ?>"
+jsbinginfoa[4]="<?php echo $imgauthora ?>"
+jsbinginfoa[5]="<?php echo $storya ?>"
 
 //0日前必应图片信息
 var jsbinginfo0=new Array()
@@ -457,12 +454,7 @@ jsbinginfo7[4]="<?php echo $imgauthor7 ?>"
 jsbinginfo7[5]="没有往日美图故事"
 
 //默认美图信息日期指定
-var jsbinginfo;
-if(jsbinginfoa!=""){
-	jsbinginfo = jsbinginfoa;
-}else{
-	jsbinginfo = jsbinginfo0;
-}
+var jsbinginfo = jsbinginfoa;
 var bingflag = 0;
 
 //向指定id输出html代码

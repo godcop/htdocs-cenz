@@ -13,7 +13,6 @@ if(!isset($_SESSION['username'])){
 	$setupsql="select * from user where username='{$username}'";
 	$result=$conn->query($setupsql);
 	$setupinfo=$result->fetch_row();//得到当前登录用户的所有信息
-	$custom_bg=$setupinfo[6];
 	
 	//判断用户是否设置首页标题，如没有设置，则为默认标题。
 	if($setupinfo[4]==""){
@@ -29,17 +28,67 @@ if(!isset($_SESSION['username'])){
 		$title2=$setupinfo[5];
 	}
 	
-	//判断用户是否设置自定义背景图片，如没有设置，则为默认图片。
+	//判断用户是否设置自定义背景图片，如没有设置，则为默认图片。(目前还是用的最笨的办法)
 	if($setupinfo[6]==""){
-		$title2="所谓成功，只有两个标准，小时候的分数，大了后的存款。";
+		$imgstra=file_get_contents('http://cn.bing.com/HPImageArchive.aspx?idx=0&n=1&mkt=zh-CN');//获取0日前图片接口
+		$storystra=file_get_contents('http://cn.bing.com/cnhp/coverstory/');//获取故事接口
+		preg_match("/<urlBase>(.+?)<\/urlBase>/ies",$imgstra,$imgmatchesa);
+		$imgurla='http://cn.bing.com'.$imgmatchesa[1].'_1920x1080.jpg';//0日前图片链接地址
+		preg_match("/<copyright>(.+?)<\/copyright>/ies",$imgstra,$copyrightmatchesa);
+		$imgtitlea=strstr($copyrightmatchesa[1],'，',true);//图片介绍标题
+		$imgaddressa=substr(strstr(strstr($copyrightmatchesa[1],'(',true),'，'),3);//图片拍摄地点
+		$imgauthora=strstr(substr(strstr($copyrightmatchesa[1],'('),4),')',true);//图片作者信息
+		preg_match("/para1\":\"(.+?)\",\"para2\"/ies",$storystra,$storymatchesa);
+		$storya=$storymatchesa[1];//图片故事
+		if ($imgtitlea==null) {
+		  $imgtitlea=strstr($copyrightmatchesa[1],'(',true);
+		  $imgaddressa="必应精选";
+		} 
 	}else{
-		$title2=$setupinfo[5];
+		$imgurla=$setupinfo[6];
+		$imgtitlea="自定义背景图片";
+		$imgaddressa="自定义";
+		$imgauthora=$username;
+		$storya="这是【".$username."】自定义的背景图片</br>Tips:</br>1.如果没有背景图片显示，请检查背景图片URL是否输入正确。</br>2.左右切换图片后，如要返回自定义背景图片，请刷新本页面！";
+	}
+	
+	//根据用户选择的搜索引擎自动更换搜索引擎
+	$search_baidu='<form action="http://www.baidu.com/baidu" class="search" id="sb_form" target="_blank">
+			<input name="tn" type="hidden" value="SE_zzsearchcode_shhzc78w"><!--百度站长信息-->
+			<input class="sw_qbox" id="inputs" name="wd" title="输入搜索词" type="text" autocomplete="off" baidusug="1"/>
+			<input class="sw_qbtn" id="sb_form_go" name="go" tabindex="0" title="百度一下" type="submit" value=""/>
+		</form>';
+	$search_google='<form action="http://www.google.com/search" class="search" id="sb_form" target="_blank">
+			<input class="sw_qbox" id="inputs" name="q" title="输入搜索词" type="text" />
+			<input class="sw_qbtn" id="sb_form_go" name="btnG" title="谷歌一下" type="submit" value=""/>
+		</form>';
+	$search_bing='<form action="https://cn.bing.com/search" method="get" class="search" id="sb_form" target="_blank">
+			<input class="sw_qbox" id="inputs" name="q" title="输入搜索词" type="text" />
+			<input class="sw_qbtn" id="sb_form_go" title="必应搜索" type="submit" value=""/>
+		</form>';
+	$search_duck='<form action="https://duckduckgo.com/search" method="get" class="search" id="sb_form" target="_blank">
+			<input class="sw_qbox" id="inputs" name="q" title="输入搜索词" type="text" />
+			<input class="sw_qbtn" id="sb_form_go" title="鸭子搜索" type="submit" value=""/>
+		</form>';
+	
+	switch ($setupinfo[8]) {
+		case "duck":
+			$search=$search_duck;
+			break;
+		case "google":
+			$search=$search_google;
+			break;
+		case "bing":
+			$search=$search_bing;
+			break;
+		default:
+			$search=$search_baidu;
 	}
 	
 	
 	
 	
-	
+
 	
 	
 	
