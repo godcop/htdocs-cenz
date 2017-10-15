@@ -31,16 +31,18 @@ include ('bookmark/home_getbinginfo.php');
 		<div class="setup_title_h1">首页设置</div>
 		<div class="setup_title_h2">简单设置即可让你的视界更性感</div>
 		<form action="bookmark/setup.php" class="setup_subbox" method="post" id="setup_subbox">
-			<input class="setup_input" type="text" name="title1" value="" placeholder="首页标题：少于10个字符"/>
-			<input class="setup_input" type="text" name="title2" value="" placeholder="每日一语：少于25个字符"/>
-			<input class="setup_input" type="text" name="bgurl" value="" placeholder="自定义背景：http://x.com/x.jpg"/>
-			<input class="setup_input" type="text" name="links" value=""  placeholder="顶部链接：橙子，http://cenz.cn;"/>
+			<input class="setup_input" type="text" name="title1" value="<?php echo $setup_title1; ?>" placeholder="首页标题：少于10个字符"/>
+			<input class="setup_input" type="text" name="title2" value="<?php echo $setup_title2; ?>" placeholder="每日一语：少于25个字符"/>
+			<input class="setup_input" type="text" name="bgurl" value="<?php echo $setup_bgurl; ?>" placeholder="自定义背景：http://x.com/x.jpg"/>
+			<input class="setup_input" type="text" name="links" value="<?php echo $setup_links; ?>" placeholder="顶部链接：橙子，http://cenz.cn;"/>
 			<div class="setup_search_title">默认搜索引擎</div>
 			<div class="setup_search_box">
-				<div><input class="setup_search" id="radio-1" type="radio" name="search" value="baidu" checked="checked"><label for="radio-1"></label> 百度 Baidu.com</div>
-				<div><input class="setup_search" id="radio-2" type="radio" name="search" value="google"><label for="radio-2"></label> 谷歌 Google.com</div>
-				<div><input class="setup_search" id="radio-3" type="radio" name="search" value="bing"><label for="radio-3"></label> 必应 Bing.com</div>
-				<div><input class="setup_search" id="radio-4" type="radio" name="search" value="duck"><label for="radio-4"></label> 鸭子 Duckduckgo.com</div>
+				<div><input class="setup_search" id="radio-1" type="radio" name="search" value="baidu" <?php echo $checked_baidu;?>><label for="radio-1"></label> 百度 Baidu.com</div>
+				<div><input class="setup_search" id="radio-2" type="radio" name="search" value="google" <?php echo $checked_google;?>><label for="radio-2"></label> 谷歌 Google.com</div>
+				<div><input class="setup_search" id="radio-3" type="radio" name="search" value="bing" <?php echo $checked_bing;?>><label for="radio-3"></label> 必应 Bing.com</div>
+				<div><input class="setup_search" id="radio-5" type="radio" name="search" value="sogou" <?php echo $checked_sogou;?>><label for="radio-5"></label> 搜狗 sogou.com</div>
+				<div><input class="setup_search" id="radio-6" type="radio" name="search" value="duck" <?php echo $checked_duck;?>><label for="radio-6"></label> 鸭子 Duckduckgo.com</div>
+				<div><input class="setup_search" id="radio-4" type="radio" name="search" value="360" <?php echo $checked_360;?>><label for="radio-4"></label> 360搜索 so.com</div>
 			</div>
 			<input class="setup_submit" type="submit" value="确认提交">
 		</form>
@@ -62,10 +64,10 @@ include ('bookmark/home_getbinginfo.php');
 <div class="nav_full" id="nav_full">
 	<div class="nav_nav_bg" id="nav_nav_bg">
 		<ul class="nav_nav">
-			<a href="http://www.baidu.com" target="_blank"><li>主页</li></a>
-			<a href="http://www.baidu.com" target="_blank"><li>精选站点</li></a>
-			<a href="http://www.baidu.com" target="_blank"><li>常用网址</li></a>
-			<a href="http://www.baidu.com" target="_blank"><li>参考文件</li></a>
+			<a href="#"><li>橙子主页</li></a>
+			<a href="#"><li>精选站点</li></a>
+			<a href="#"><li>常用网址</li></a>
+			<a href="#"><li>自定义</li></a>
 		</ul>
 	</div>
 	<div class="nav_main" id="nav_main">
@@ -294,13 +296,6 @@ include ('bookmark/home_getbinginfo.php');
 					<div class="marks_enter"><a href="##">进入</a></div>
 				</div>
 			</div><!--网址标签卡end-->
-			a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>
-			a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>
-			a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>
-			a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>
-			a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>
-			a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>a</br>
-			a</br>a</br>a</br>a</br>a</br>结束
 		</div>
 	</div>
 </div>
@@ -311,19 +306,13 @@ include ('bookmark/home_getbinginfo.php');
 			<div class="nav_left" id="nav_left"><img src="style/img/menu.png" style="vertical-align: middle" height="20px" width="20px"/></div>
 		</div>
 		<div class="header_right">
-			<!--菜单1-->
-			<li class="li_right_a"><a href="http://www.mawanli.cn" target="_blank">麻豌粒</a></li>
-			<!--<li class="li_right">|</li>-->
-			<!--菜单2-->
-			<li class="li_right_a"><a href="http://www.wedcq.com" target="_blank">地产圈</a></li>
-			<!--<li class="li_right">|</li>-->
-			<!--菜单3-->
-			<li class="li_right_a"><a href="http://www.bing.com" target="_blank">必应中国</a></li>
-			<!--<li class="li_right">|</li>-->
-			<!--菜单4-->
-			<li class="li_right_a"><a href="http://www.google.com" target="_blank">谷歌搜索</a></li>
-			<!--<li class="li_right">|</li>-->
-			<!--菜单5-->
+			<?php 
+				echo $get_links1;
+				echo $get_links2;
+				echo $get_links3;
+				echo $get_links4;
+				echo $get_links5;
+			?>
 			<li class="li_right_menu"><img src="style/img/setup.png" style="vertical-align: middle" height="20px" width="20px"/></li>
 		</div>
 	</div>

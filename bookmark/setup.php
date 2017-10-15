@@ -20,7 +20,7 @@
 	$result=$conn->query($setupsql);
 	if ($result)
 	{
-		echo "<script>alert('修改成功！');history.back();</script>";
+		header("Location:../home.php");
 	}
 	else
 	{

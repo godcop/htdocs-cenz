@@ -14,6 +14,12 @@ if(!isset($_SESSION['username'])){
 	$result=$conn->query($setupsql);
 	$setupinfo=$result->fetch_row();//得到当前登录用户的所有信息
 	
+	//从数据库中获取的当前用户已配置的信息
+	$setup_title1=$setupinfo[4];
+	$setup_title2=$setupinfo[5];
+	$setup_bgurl=$setupinfo[6];
+	$setup_links=$setupinfo[7];
+	
 	//判断用户是否设置首页标题，如没有设置，则为默认标题。
 	if($setupinfo[4]==""){
 		$title1="Daily Sentence";
@@ -53,6 +59,7 @@ if(!isset($_SESSION['username'])){
 	}
 	
 	//根据用户选择的搜索引擎自动更换搜索引擎
+	//从数据库中获取的当前用户已配置的默认搜索引擎
 	$search_baidu='<form action="http://www.baidu.com/baidu" class="search" id="sb_form" target="_blank">
 			<input name="tn" type="hidden" value="SE_zzsearchcode_shhzc78w"><!--百度站长信息-->
 			<input class="sw_qbox" id="inputs" name="wd" title="输入搜索词" type="text" autocomplete="off" baidusug="1"/>
@@ -66,6 +73,14 @@ if(!isset($_SESSION['username'])){
 			<input class="sw_qbox" id="inputs" name="q" title="输入搜索词" type="text" />
 			<input class="sw_qbtn" id="sb_form_go" title="必应搜索" type="submit" value=""/>
 		</form>';
+	$search_360='<form action="https://www.so.com/s" method="get" class="search" id="sb_form" target="_blank">
+			<input class="sw_qbox" id="inputs" name="q" title="输入搜索词" type="text" />
+			<input class="sw_qbtn" id="sb_form_go" title="360搜索" type="submit" value=""/>
+		</form>';
+	$search_sogou='<form action="https://www.sogou.com/web" method="get" class="search" id="sb_form" target="_blank">
+			<input class="sw_qbox" id="inputs" name="query" title="输入搜索词" type="text" />
+			<input class="sw_qbtn" id="sb_form_go" title="搜狗搜索" type="submit" value=""/>
+		</form>';
 	$search_duck='<form action="https://duckduckgo.com/search" method="get" class="search" id="sb_form" target="_blank">
 			<input class="sw_qbox" id="inputs" name="q" title="输入搜索词" type="text" />
 			<input class="sw_qbtn" id="sb_form_go" title="鸭子搜索" type="submit" value=""/>
@@ -74,24 +89,78 @@ if(!isset($_SESSION['username'])){
 	switch ($setupinfo[8]) {
 		case "duck":
 			$search=$search_duck;
+			$checked_duck='checked="checked"';
 			break;
 		case "google":
 			$search=$search_google;
+			$checked_google='checked="checked"';
 			break;
 		case "bing":
 			$search=$search_bing;
+			$checked_bing='checked="checked"';
+			break;
+		case "360":
+			$search=$search_360;
+			$checked_360='checked="checked"';
+			break;
+		case "sogou":
+			$search=$search_sogou;
+			$checked_sogou='checked="checked"';
 			break;
 		default:
 			$search=$search_baidu;
+			$checked_baidu='checked="checked"';
 	}
 	
-	
-	
-	
+	//判断用户是否设置自定义首页顶部链接，如没有设置，则为默认链接。
+	if($setupinfo[7]==""){
+		$links1=array("必应","http://www.bing.com");
+		$links2=array("百度","http://www.baidu.com");
+		$links3=array("谷歌","http://www.google.com");
+		$links4=array("知乎","http://www.zhihu.com");
+		$links5=array("深度","http://www.deepin.org");
+		if($links1[0]!=""){
+			$get_links1='<li class="li_right_a"><a href="'.$links1[1].'" target="_blank">'.$links1[0].'</a></li>';
+		}
+		if($links2[0]!=""){
+			$get_links2='<li class="li_right_a"><a href="'.$links2[1].'" target="_blank">'.$links2[0].'</a></li>';
+		}
+		if($links3[0]!=""){
+			$get_links3='<li class="li_right_a"><a href="'.$links3[1].'" target="_blank">'.$links3[0].'</a></li>';
+		}
+		if($links4[0]!=""){
+			$get_links4='<li class="li_right_a"><a href="'.$links4[1].'" target="_blank">'.$links4[0].'</a></li>';
+		}
+		if($links5[0]!=""){
+			$get_links5='<li class="li_right_a"><a href="'.$links5[1].'" target="_blank">'.$links5[0].'</a></li>';
+		}
 
-	
-	
-	
+	}else{
+		$links=";".$setupinfo[7];
+		preg_match_all("/;(.+?);/ies",$links,$links_arr);
+		$links1=array(strstr($links_arr[1][0],',',true),stristr($links_arr[1][0],'h'));
+		$links2=array(strstr($links_arr[1][1],',',true),stristr($links_arr[1][1],'h'));
+		$links3=array(strstr($links_arr[1][2],',',true),stristr($links_arr[1][2],'h'));
+		$links4=array(strstr($links_arr[1][3],',',true),stristr($links_arr[1][3],'h'));
+		$links5=array(strstr($links_arr[1][4],',',true),stristr($links_arr[1][4],'h'));
+		
+		if($links1[0]!=""){
+			$get_links1='<li class="li_right_a"><a href="'.$links1[1].'" target="_blank">'.$links1[0].'</a></li>';
+		}
+		if($links2[0]!=""){
+			$get_links2='<li class="li_right_a"><a href="'.$links2[1].'" target="_blank">'.$links2[0].'</a></li>';
+		}
+		if($links3[0]!=""){
+			$get_links3='<li class="li_right_a"><a href="'.$links3[1].'" target="_blank">'.$links3[0].'</a></li>';
+		}
+		if($links4[0]!=""){
+			$get_links4='<li class="li_right_a"><a href="'.$links4[1].'" target="_blank">'.$links4[0].'</a></li>';
+		}
+		if($links5[0]!=""){
+			$get_links5='<li class="li_right_a"><a href="'.$links5[1].'" target="_blank">'.$links5[0].'</a></li>';
+		}
+	}
+
 //全新PHP获取必应首页信息代码
 //0日前图片
 $imgstr0=file_get_contents('http://cn.bing.com/HPImageArchive.aspx?idx=0&n=1&mkt=zh-CN');//获取0日前图片接口

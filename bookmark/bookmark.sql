@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-10-14 16:15:36
+-- Generation Time: 2017-10-15 11:16:26
 -- 服务器版本： 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -38,15 +38,7 @@ CREATE TABLE `user` (
   `bgurl` varchar(100) DEFAULT NULL,
   `links` varchar(300) DEFAULT NULL,
   `search` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- 转存表中的数据 `user`
---
-
-INSERT INTO `user` (`uid`, `username`, `password`, `email`, `title1`, `title2`, `bgurl`, `links`, `search`) VALUES
-(6, 'Cenz', 'cenz', '1@qq.com', 'ä½ å¥½', '', '', '', 'baidu'),
-(7, 'æ©™å­', 'cenz', '2@qq.com', '', '', 'http://192.168.31.124/1.jpg', '', 'baidu');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Indexes for dumped tables
