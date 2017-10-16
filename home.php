@@ -24,9 +24,22 @@ include ('bookmark/home_getbinginfo.php');
 <div class="navs" id="navs">
 	<div class="setup_wrap">
 		<div class="setup_avatar">
-			<img class="setup_avatar_img" src="style/img/avatar.gif">
+			<img class="setup_avatar_img" src="<?php echo $avatar ?>">
 			<div class="setup_avatar_t"><?php echo $username ?>，欢迎你！</div>
-			<div class="setup_avatar_out"><a href="bookmark/login.php?action=logout">退出</a></div>
+			<div class="setup_avatar_edit">
+				<a id="showavatarbox">更换头像</a> | 
+				<a href="bookmark/login.php?action=logout">退出</a>
+			</div>
+			<div class="upload_avatar" id="upload_avatar">
+				<form action="bookmark/uploadavatar.php" method="post" enctype="multipart/form-data">
+					<input class="avatar_txt" type="text" name="textfield" id="textfield" />
+					<input type="file" name="avatar" class="avatar_file" id="avatar_file" size="28" onchange="document.getElementById('textfield').value=this.value" />
+					<div class="avatar_btn">
+						<label for="avatar_file"><div class="avatar_choose">选择</div></label>
+						<input type="submit" name="submit" class="avatar_upload" value="上传" />
+					</div>
+				</form>
+			</div>
 		</div>
 		<div class="setup_title_h1">首页设置</div>
 		<div class="setup_title_h2">简单设置即可让你的视界更性感</div>
@@ -307,12 +320,8 @@ include ('bookmark/home_getbinginfo.php');
 		</div>
 		<div class="header_right">
 			<?php 
-				echo $get_links1;
-				echo $get_links2;
-				echo $get_links3;
-				echo $get_links4;
-				echo $get_links5;
-			?>
+			echo $get_links1;echo $get_links2;echo $get_links3;echo $get_links4;echo $get_links5;echo $get_links6;echo $get_links7;echo $get_links8;echo $get_links9;echo $get_links10;?>
+			
 			<li class="li_right_menu"><img src="style/img/setup.png" style="vertical-align: middle" height="20px" width="20px"/></li>
 		</div>
 	</div>

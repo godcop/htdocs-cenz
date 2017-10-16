@@ -8,8 +8,19 @@ if(!isset($_SESSION['username'])){
     exit();
 }
 	$username=$_SESSION['username'];
-	
 
+	//判断用户是否设置头像（检测用户的头像是否存在），如果没有，则显示默认头像
+	$avatarfile="upload/avatar/".$username.".png";
+	if(is_file($avatarfile))
+	  {
+	  $avatar="upload/avatar/".$username.".png";
+	  }
+	else
+	  {
+	  $avatar="style/img/avatar.gif";
+	  }
+		
+	//查询数据库
 	$setupsql="select * from user where username='{$username}'";
 	$result=$conn->query($setupsql);
 	$setupinfo=$result->fetch_row();//得到当前登录用户的所有信息
@@ -143,6 +154,11 @@ if(!isset($_SESSION['username'])){
 		$links3=array(strstr($links_arr[1][2],',',true),stristr($links_arr[1][2],'h'));
 		$links4=array(strstr($links_arr[1][3],',',true),stristr($links_arr[1][3],'h'));
 		$links5=array(strstr($links_arr[1][4],',',true),stristr($links_arr[1][4],'h'));
+		$links6=array(strstr($links_arr[1][5],',',true),stristr($links_arr[1][5],'h'));
+		$links7=array(strstr($links_arr[1][6],',',true),stristr($links_arr[1][6],'h'));
+		$links8=array(strstr($links_arr[1][7],',',true),stristr($links_arr[1][7],'h'));
+		$links9=array(strstr($links_arr[1][8],',',true),stristr($links_arr[1][8],'h'));
+		$links10=array(strstr($links_arr[1][9],',',true),stristr($links_arr[1][9],'h'));
 		
 		if($links1[0]!=""){
 			$get_links1='<li class="li_right_a"><a href="'.$links1[1].'" target="_blank">'.$links1[0].'</a></li>';
@@ -159,8 +175,23 @@ if(!isset($_SESSION['username'])){
 		if($links5[0]!=""){
 			$get_links5='<li class="li_right_a"><a href="'.$links5[1].'" target="_blank">'.$links5[0].'</a></li>';
 		}
+		if($links6[0]!=""){
+			$get_links6='<li class="li_right_a"><a href="'.$links6[1].'" target="_blank">'.$links6[0].'</a></li>';
+		}
+		if($links7[0]!=""){
+			$get_links7='<li class="li_right_a"><a href="'.$links7[1].'" target="_blank">'.$links7[0].'</a></li>';
+		}
+		if($links8[0]!=""){
+			$get_links8='<li class="li_right_a"><a href="'.$links8[1].'" target="_blank">'.$links8[0].'</a></li>';
+		}
+		if($links9[0]!=""){
+			$get_links9='<li class="li_right_a"><a href="'.$links9[1].'" target="_blank">'.$links9[0].'</a></li>';
+		}
+		if($links10[0]!=""){
+			$get_links10='<li class="li_right_a"><a href="'.$links10[1].'" target="_blank">'.$links10[0].'</a></li>';
+		}
 	}
-
+	
 //全新PHP获取必应首页信息代码
 //0日前图片
 $imgstr0=file_get_contents('http://cn.bing.com/HPImageArchive.aspx?idx=0&n=1&mkt=zh-CN');//获取0日前图片接口

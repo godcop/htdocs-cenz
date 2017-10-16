@@ -167,4 +167,14 @@ function fb_button(a){
         }
     });
 	
-	
+//切换显示或隐藏上传头像菜单
+var oButton = document.getElementById("showavatarbox");//假设HTML中按钮id="button"，并取得。
+var oDiv = document.getElementById("upload_avatar");//假设HTML中div的id="div"，并取得。
+oButton.onclick=function(){
+     if (oDiv.style.display == "block"){
+             oDiv.style.display = "none";
+   }else {
+           oDiv.style.display = "block";
+ }
+}
+

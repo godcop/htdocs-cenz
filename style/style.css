@@ -80,6 +80,7 @@ ul ,li {
 	text-align: center;
 	float:left;
 	cursor: pointer;
+	margin-left:10px;
 }
 
 .xiala {
@@ -618,12 +619,76 @@ a:hover ul {
 	margin:10px 0px 5px 0px;
 }
 
-.setup_avatar_out a{
+.setup_avatar_edit{
 	color:#aaa;
 	font-size:12px;
 	text-decoration:none;
 }
 
+.setup_avatar_edit a{
+	color:#aaa;
+	font-size:12px;
+	text-decoration:none;
+	cursor: pointer;
+}
+
+.upload_avatar {
+	margin-top:26px;
+	padding-top:10px;
+	border-top:1px solid #555;
+	display:none;
+}
+
+.avatar_txt {
+	width:180px;
+	height:33px;
+	margin:16px 0px 26px 0px;
+	border-radius:3px;
+	border:0px;
+	outline:none;
+	padding:0px 10px 0px 10px;
+	font-family:"微软雅黑";
+	color:#333;
+}
+
+.avatar_file {
+	display:none;
+}
+
+.avatar_btn {
+	width:200px;
+	height:33px;
+}
+
+.avatar_choose {
+	width:95px;
+	height:33px;
+	line-height:33px;
+	border-radius:3px;
+	border:0px;
+	outline:none;
+	background-color:#058787;
+	color:#fff;
+	font-family:"微软雅黑";
+	font-size:14px;
+	cursor: pointer;
+	float:left;
+}
+
+.avatar_upload {
+	width:95px;
+	height:33px;
+	line-height:33px;
+	border-radius:3px;
+	border:0px;
+	outline:none;
+	background-color:#058787;
+	color:#fff;
+	font-family:"微软雅黑";
+	font-size:14px;
+	cursor: pointer;
+	float:right;
+}
 
 .setup_title_h1 {
 	margin:30px 0px 5px 0px;
