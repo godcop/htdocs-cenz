@@ -28,7 +28,7 @@
             $insres=$conn->query($inssql);      //插入用户信息
             if ($insres)
             {
-                echo "<script>alert('注册成功');location.href='/';</script>";//弹出注册成功，并跳转到根目录默认首页
+                echo "<script>alert('注册成功，现在可以返回登录');location.href='/';</script>";//弹出注册成功，并跳转到根目录默认首页
             }
             else
             {

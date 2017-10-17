@@ -100,7 +100,7 @@ if(!isset($_SESSION['username'])){
 			<input class="sw_qbox" id="inputs" name="query" title="输入搜索词" type="text" />
 			<input class="sw_qbtn" id="sb_form_go" title="搜狗搜索" type="submit" value=""/>
 		</form>';
-	$search_duck='<form action="https://duckduckgo.com/search" method="get" class="search" id="sb_form" target="_blank">
+	$search_duck='<form action="https://duckduckgo.com/" method="get" class="search" id="sb_form" target="_blank">
 			<input class="sw_qbox" id="inputs" name="q" title="输入搜索词" type="text" />
 			<input class="sw_qbtn" id="sb_form_go" title="鸭子搜索" type="submit" value=""/>
 		</form>';
