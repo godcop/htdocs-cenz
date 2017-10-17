@@ -1,4 +1,4 @@
-﻿//左右按钮动作函数开始
+//左右按钮动作函数开始
 function fb_button(a){
 		//根据点击左右按钮加减bingflag数值
         bingflag=bingflag+a;

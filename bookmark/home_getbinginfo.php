@@ -1,4 +1,4 @@
-﻿<?php
+<?php
     error_reporting(E_ALL &~ E_NOTICE);     //屏蔽错误信息
     include 'conn.php';     //调用数据库连接文件
 	

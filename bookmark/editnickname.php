@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * 此为设置用户昵称后台
  */
@@ -16,7 +16,7 @@
 	$result=$conn->query($setupsql);
 	if ($result)
 	{
-		header("Location:../home.php");
+		header("Location:../index.php");
 	}
 	else
 	{
