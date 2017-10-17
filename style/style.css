@@ -634,15 +634,21 @@ a:hover ul {
 
 .upload_avatar {
 	margin-top:26px;
-	padding-top:10px;
-	border-top:1px solid #555;
+	padding-top:13px;
+	border-top:1px solid #aaa;
 	display:none;
+}
+
+.setup_avatarbox {
+	margin:13px 0px 13px 0px;
+	padding-bottom:13px;
+	border-bottom:1px solid #555;
 }
 
 .avatar_txt {
 	width:180px;
 	height:33px;
-	margin:16px 0px 26px 0px;
+	margin:13px 0px 13px 0px;
 	border-radius:3px;
 	border:0px;
 	outline:none;

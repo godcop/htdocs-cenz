@@ -25,14 +25,19 @@ include ('bookmark/home_getbinginfo.php');
 	<div class="setup_wrap">
 		<div class="setup_avatar">
 			<img class="setup_avatar_img" src="<?php echo $avatar ?>">
-			<div class="setup_avatar_t"><?php echo $username ?>，欢迎你！</div>
+			<div class="setup_avatar_t"><?php echo $show_name ?>，欢迎你！</div>
 			<div class="setup_avatar_edit">
-				<a id="showavatarbox">更换头像</a> | 
+				<a id="showavatarbox">编辑</a> | 
 				<a href="bookmark/login.php?action=logout">退出</a>
 			</div>
 			<div class="upload_avatar" id="upload_avatar">
+				<form action="bookmark/editnickname.php" method="post">
+					<input class="setup_input" type="text" name="nickname" value="<?php echo $nickname; ?>" placeholder="输入昵称"/>
+					<input class="setup_submit" type="submit" value="修改昵称">
+				</form>
+				<div class="setup_avatarbox"></div>
 				<form action="bookmark/uploadavatar.php" method="post" enctype="multipart/form-data">
-					<input class="avatar_txt" type="text" name="textfield" id="textfield" />
+					<input class="avatar_txt" type="text" name="textfield" id="textfield" placeholder="上传图片本地地址"/>
 					<input type="file" name="avatar" class="avatar_file" id="avatar_file" size="28" onchange="document.getElementById('textfield').value=this.value" />
 					<div class="avatar_btn">
 						<label for="avatar_file"><div class="avatar_choose">选择</div></label>

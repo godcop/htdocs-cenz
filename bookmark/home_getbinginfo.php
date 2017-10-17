@@ -30,6 +30,14 @@ if(!isset($_SESSION['username'])){
 	$setup_title2=$setupinfo[5];
 	$setup_bgurl=$setupinfo[6];
 	$setup_links=$setupinfo[7];
+	$nickname=$setupinfo[9];
+	
+	//判断用户是否设置昵称，如没有昵称，则显示用户名
+	if($nickname==""){
+		$show_name=$username;
+	}else{
+		$show_name=$nickname;
+	}
 	
 	//判断用户是否设置首页标题，如没有设置，则为默认标题。
 	if($setupinfo[4]==""){

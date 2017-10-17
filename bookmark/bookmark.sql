@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-10-15 11:16:26
+-- Generation Time: 2017-10-17 06:29:47
 -- 服务器版本： 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -37,7 +37,8 @@ CREATE TABLE `user` (
   `title2` text,
   `bgurl` varchar(100) DEFAULT NULL,
   `links` varchar(300) DEFAULT NULL,
-  `search` varchar(10) NOT NULL
+  `search` varchar(10) NOT NULL,
+  `nickname` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -58,7 +59,7 @@ ALTER TABLE `user`
 -- 使用表AUTO_INCREMENT `user`
 --
 ALTER TABLE `user`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
