@@ -20,7 +20,7 @@
 	$result=$conn->query($setupsql);
 	if ($result)
 	{
-		header("Location:../index.php");
+		header("Location:../");
 	}
 	else
 	{

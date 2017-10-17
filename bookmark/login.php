@@ -23,7 +23,7 @@
             {
 				Session_start();       //使用SESSION前必须调用该函数。
 				$_SESSION['username']=$username;   //注册一个SESSION变量
-				header("Location:../index.php");
+				header("Location:../");
             }
             else
             {
