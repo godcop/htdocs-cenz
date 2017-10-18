@@ -157,16 +157,16 @@ if(!isset($_SESSION['username'])){
 	}else{
 		$links=";".$setupinfo[7];
 		preg_match_all("/;(.+?);/ies",$links,$links_arr);
-		$links1=array(strstr($links_arr[1][0],',',true),stristr($links_arr[1][0],'h'));
-		$links2=array(strstr($links_arr[1][1],',',true),stristr($links_arr[1][1],'h'));
-		$links3=array(strstr($links_arr[1][2],',',true),stristr($links_arr[1][2],'h'));
-		$links4=array(strstr($links_arr[1][3],',',true),stristr($links_arr[1][3],'h'));
-		$links5=array(strstr($links_arr[1][4],',',true),stristr($links_arr[1][4],'h'));
-		$links6=array(strstr($links_arr[1][5],',',true),stristr($links_arr[1][5],'h'));
-		$links7=array(strstr($links_arr[1][6],',',true),stristr($links_arr[1][6],'h'));
-		$links8=array(strstr($links_arr[1][7],',',true),stristr($links_arr[1][7],'h'));
-		$links9=array(strstr($links_arr[1][8],',',true),stristr($links_arr[1][8],'h'));
-		$links10=array(strstr($links_arr[1][9],',',true),stristr($links_arr[1][9],'h'));
+		$links1=array(strstr($links_arr[1][0],',',true),stristr($links_arr[1][0],'http://'));
+		$links2=array(strstr($links_arr[1][1],',',true),stristr($links_arr[1][1],'http://'));
+		$links3=array(strstr($links_arr[1][2],',',true),stristr($links_arr[1][2],'http://'));
+		$links4=array(strstr($links_arr[1][3],',',true),stristr($links_arr[1][3],'http://'));
+		$links5=array(strstr($links_arr[1][4],',',true),stristr($links_arr[1][4],'http://'));
+		$links6=array(strstr($links_arr[1][5],',',true),stristr($links_arr[1][5],'http://'));
+		$links7=array(strstr($links_arr[1][6],',',true),stristr($links_arr[1][6],'http://'));
+		$links8=array(strstr($links_arr[1][7],',',true),stristr($links_arr[1][7],'http://'));
+		$links9=array(strstr($links_arr[1][8],',',true),stristr($links_arr[1][8],'http://'));
+		$links10=array(strstr($links_arr[1][9],',',true),stristr($links_arr[1][9],'http://'));
 		
 		if($links1[0]!=""){
 			$get_links1='<li class="li_right_a"><a href="'.$links1[1].'" target="_blank">'.$links1[0].'</a></li>';
