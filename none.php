@@ -29,6 +29,9 @@ include 'getbinginfo.php';
 			<form class="login_box" action="bookmark/login.php" method="post" id="login_box">
 				<input class="login_box_a" type="text" name="username" value="" placeholder="用户名"/>
 				<input class="login_box_a" type="password" name="password" value="" placeholder="密码"/>
+				<div class="login_box_rem">
+				<input type="checkbox" name="remember" value="yes" style="vertical-align:middle;" />记住密码
+				</div>
 				<input class="login_box_submit" type="submit" name="submit" value="现在登录">
 			</form>
 			<div class="go_signup" id="go_signup" onclick="switchsignbox()">前往注册</div>

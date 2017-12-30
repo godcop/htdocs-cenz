@@ -858,6 +858,13 @@ a:hover ul {
 	color:#aaa;
 }
 
+.login_box_rem {
+	width:180px;
+	margin:13px 0px 13px 0px;
+	font-size:13px;
+	text-align:center;
+}
+
 .login_box_submit {
 	width:200px;
 	height:33px;
